@@ -129,9 +129,9 @@ fi;
 # reset profiles auto trigger to be used by kernel ADMIN, in case of need, if new value added in default profiles
 # just set numer $RESET_MAGIC + 1 and profiles will be reset one time on next boot with new kernel.
 # incase that ADMIN feel that something wrong with global STweaks config and profiles, then ADMIN can add +1 to CLEAN_ALU_DIR
-# to clean all files on first boot from /data/.b--b/ folder.
-RESET_MAGIC=1;
-CLEAN_ALU_DIR=1;
+# to clean all files on first boot from /data/.alucard/ folder.
+RESET_MAGIC=7;
+CLEAN_ALU_DIR=2;
 
 if [ ! -e /data/.b--b/reset_profiles ]; then
 	$BB echo "$RESET_MAGIC" > /data/.b--b/reset_profiles;
