@@ -15,7 +15,7 @@
 /charger		u:object_r:rootfs:s0
 /init			u:object_r:init_exec:s0
 /sbin(/.*)?		u:object_r:rootfs:s0
-/sbin/bb/busybox     u:object_r:rootfs:s0
+
 # Empty directories
 /lost\+found		u:object_r:rootfs:s0
 /proc			u:object_r:rootfs:s0
@@ -129,7 +129,6 @@
 # System files
 #
 /system(/.*)?		u:object_r:system_file:s0
-/system/bin/mkfs.f2fs   u:object_r:system_file:s0
 /system/bin/e2fsck	--	u:object_r:fsck_exec:s0
 /system/bin/fsck\.f2fs	--	u:object_r:fsck_exec:s0
 /system/bin/fsck_msdos	--	u:object_r:fsck_exec:s0
@@ -167,7 +166,6 @@
 /system/xbin/procrank   u:object_r:procrank_exec:s0
 /system/xbin/perfprofd  u:object_r:perfprofd_exec:s0
 /system/xbin/simpleperf u:object_r:system_file:s0
-/system/xbin/zip	u:object_r:rootfs:s0
 /system/vendor/bin/gpsd u:object_r:gpsd_exec:s0
 /system/bin/dnsmasq     u:object_r:dnsmasq_exec:s0
 /system/bin/hostapd     u:object_r:hostapd_exec:s0
@@ -179,14 +177,12 @@
 /system/bin/logwrapper  u:object_r:system_file:s0
 /system/bin/vdc         u:object_r:vdc_exec:s0
 /system/bin/install-recovery.sh u:object_r:install_recovery_exec:s0
-/system/xbin(/.*)?      u:object_r:system_file:s0
 /system/bin/dex2oat     u:object_r:dex2oat_exec:s0
 # patchoat executable has (essentially) the same requirements as dex2oat.
 /system/bin/patchoat    u:object_r:dex2oat_exec:s0
 /system/bin/sgdisk      u:object_r:sgdisk_exec:s0
 /system/bin/blkid       u:object_r:blkid_exec:s0
 /system/bin/tzdatacheck u:object_r:tzdatacheck_exec:s0
-/system/bin/ledify u:object_r:system_file:s0
 
 #############################
 # Vendor files

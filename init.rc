@@ -43,16 +43,16 @@ on init
 
     # Create cgroup mount point for memory
     mount tmpfs none /sys/fs/cgroup mode=0750,uid=0,gid=1000
-    #mkdir /sys/fs/cgroup/memory 0750 root system
-   # mount cgroup none /sys/fs/cgroup/memory memory
-    #write /sys/fs/cgroup/memory/memory.move_charge_at_immigrate 1
-    #chown root system /sys/fs/cgroup/memory/tasks
-    #chmod 0660 /sys/fs/cgroup/memory/tasks
-    #mkdir /sys/fs/cgroup/memory/sw 0750 root system
-    #write /sys/fs/cgroup/memory/sw/memory.swappiness 100
-    #write /sys/fs/cgroup/memory/sw/memory.move_charge_at_immigrate 1
-    #chown root system /sys/fs/cgroup/memory/sw/tasks
-    #chmod 0660 /sys/fs/cgroup/memory/sw/tasks
+    mkdir /sys/fs/cgroup/memory 0750 root system
+    mount cgroup none /sys/fs/cgroup/memory memory
+    write /sys/fs/cgroup/memory/memory.move_charge_at_immigrate 1
+    chown root system /sys/fs/cgroup/memory/tasks
+    chmod 0660 /sys/fs/cgroup/memory/tasks
+    mkdir /sys/fs/cgroup/memory/sw 0750 root system
+    write /sys/fs/cgroup/memory/sw/memory.swappiness 100
+    write /sys/fs/cgroup/memory/sw/memory.move_charge_at_immigrate 1
+    chown root system /sys/fs/cgroup/memory/sw/tasks
+    chmod 0660 /sys/fs/cgroup/memory/sw/tasks
     chmod 0220 /sys/fs/cgroup/memory/cgroup.event_control
 
     mkdir /system
@@ -90,8 +90,8 @@ on init
     symlink /mnt/user/0/primary /mnt/runtime/default/self/primary
 
     # memory control cgroup
-    #mkdir /dev/memcg 0700 root system
-    #mount cgroup none /dev/memcg memory
+    mkdir /dev/memcg 0700 root system
+    mount cgroup none /dev/memcg memory
 
     write /proc/sys/kernel/panic_on_oops 1
     write /proc/sys/kernel/hung_task_timeout_secs 0
@@ -151,20 +151,20 @@ on init
     # this ensures that the cpusets are present and usable, but the device's
     # init.rc must actually set the correct cpus
     mkdir /dev/cpuset/foreground
-    write /dev/cpuset/foreground/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0
     write /dev/cpuset/foreground/mems 0
     mkdir /dev/cpuset/foreground/boost
-    write /dev/cpuset/foreground/boost/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0
     write /dev/cpuset/foreground/boost/mems 0
     mkdir /dev/cpuset/background
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/background/cpus 0
     write /dev/cpuset/background/mems 0
 
     # system-background is for system tasks that should only run on
     # little cores, not on bigs
     # to be used only by init, so don't change system-bg permissions
     mkdir /dev/cpuset/system-background
-    write /dev/cpuset/system-background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0
     write /dev/cpuset/system-background/mems 0
 
     # change permissions for all cpusets we'll touch at runtime
@@ -203,11 +203,11 @@ on init
     mkdir /dev/fscklogs 0770 root system
 
     # pstore/ramoops previous console log
-    #mount pstore pstore /sys/fs/pstore
-   # chown system log /sys/fs/pstore/console-ramoops
-   # chmod 0440 /sys/fs/pstore/console-ramoops
-   # chown system log /sys/fs/pstore/pmsg-ramoops-0
-   # chmod 0440 /sys/fs/pstore/pmsg-ramoops-0
+    mount pstore pstore /sys/fs/pstore
+    chown system log /sys/fs/pstore/console-ramoops
+    chmod 0440 /sys/fs/pstore/console-ramoops
+    chown system log /sys/fs/pstore/pmsg-ramoops-0
+    chmod 0440 /sys/fs/pstore/pmsg-ramoops-0
 
     # enable armv8_deprecated instruction hooks
     write /proc/sys/abi/swp 1
