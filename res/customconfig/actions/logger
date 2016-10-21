@@ -21,19 +21,17 @@ if [ "a$2" != "a" ]; then
 	;;
 	1)
 		LOG_STATUS=$($BB pgrep logd | $BB wc -l);
-		if [ "$LOG_STATUS" -eq "0" ]; then
+		if [ "$LOG_STATUS" -gt "0" ]; then
 			stop logd
-		else
-			start logd
-			/system/bin/logcat -b events -b main -b system -b crash > /dev/null &
-			logcat -v time -s XposedStartupMarker:D Xposed:I appproc:I XposedInstaller:I art:F libc:F DEBUG:I > /dev/null &
-			logcat -b events -v tag -s -T 1 ifw_intent_matched am_proc_start [47336449] > /dev/null &
 		fi;
+		start logd
+		/system/bin/logcat -b events -b main -b system -b crash > /dev/null &
+		logcat -v time -s XposedStartupMarker:D Xposed:I appproc:I XposedInstaller:I art:F libc:F DEBUG:I > /dev/null &
+		logcat -b events -v tag -s -T 1 ifw_intent_matched am_proc_start [47336449] > /dev/null &
 	;;
 	*)
 		logger=0;
 	;;
 	esac;
-else
-	$BB echo ${logger};
 fi;
+$BB echo ${logger};

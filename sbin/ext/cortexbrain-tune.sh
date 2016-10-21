@@ -142,7 +142,7 @@ MEMORY_TWEAKS;
 # if crond used, then give it root perent - if started by STweaks, then it will be killed in time
 CROND_SAFETY()
 {
-	if [ "$crontab_switch" == "on" ]; then
+	if [ "$crontab" == "on" ]; then
 		if [ "$($BB pgrep -f crond | $BB wc -l)" -eq "0" ]; then
 			$BB sh /res/crontab_service/service.sh > /dev/null;
 			log -p i -t "$FILE_NAME" "*** CROND STARTED ***";
