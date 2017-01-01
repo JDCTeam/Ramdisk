@@ -10,10 +10,10 @@ if [ -f /su/bin/su ]; then
 fi;
 
 # clean dalvik after selinux change.
-if [ -e /data/.b--b/selinux_mode ]; then
+if [ -e /data/.alucard/selinux_mode ]; then
 	$BB rm /data/dalvik-cache/arm/*;
 	$BB rm /data/dalvik-cache/profiles/*;
-	$BB rm /data/.b--b/selinux_mode;
+	$BB rm /data/.alucard/selinux_mode;
 	stop;
 	$BB sync;
 	reboot;
@@ -122,82 +122,82 @@ $BB chmod 666 /sys/kernel/intelli_plug/*
 $BB chmod 666 /sys/class/kgsl/kgsl-3d0/max_gpuclk
 $BB chmod 666 /sys/devices/platform/kgsl-3d0/kgsl/kgsl-3d0/pwrscale/trustzone/governor
 
-if [ ! -d /data/.b--b ]; then
-	$BB mkdir -p /data/.b--b;
+if [ ! -d /data/.alucard ]; then
+	$BB mkdir -p /data/.alucard;
 fi;
 
 # reset profiles auto trigger to be used by kernel ADMIN, in case of need, if new value added in default profiles
 # just set numer $RESET_MAGIC + 1 and profiles will be reset one time on next boot with new kernel.
 # incase that ADMIN feel that something wrong with global STweaks config and profiles, then ADMIN can add +1 to CLEAN_ALU_DIR
-# to clean all files on first boot from /data/.b--b/ folder.
-RESET_MAGIC=1;
-CLEAN_ALU_DIR=1;
+# to clean all files on first boot from /data/.alucard/ folder.
+RESET_MAGIC=7;
+CLEAN_ALU_DIR=2;
 
-if [ ! -e /data/.b--b/reset_profiles ]; then
-	$BB echo "$RESET_MAGIC" > /data/.b--b/reset_profiles;
+if [ ! -e /data/.alucard/reset_profiles ]; then
+	$BB echo "$RESET_MAGIC" > /data/.alucard/reset_profiles;
 fi;
 if [ ! -e /data/reset_alu_dir ]; then
 	$BB echo "$CLEAN_ALU_DIR" > /data/reset_alu_dir;
 fi;
-if [ -e /data/.b--b/.active.profile ]; then
-	PROFILE=$($BB cat /data/.b--b/.active.profile);
+if [ -e /data/.alucard/.active.profile ]; then
+	PROFILE=$($BB cat /data/.alucard/.active.profile);
 else
-	echo "default" > /data/.b--b/.active.profile;
-	PROFILE=$($BB cat /data/.b--b/.active.profile);
+	echo "default" > /data/.alucard/.active.profile;
+	PROFILE=$($BB cat /data/.alucard/.active.profile);
 fi;
 if [ "$(cat /data/reset_alu_dir)" -eq "$CLEAN_ALU_DIR" ]; then
-	if [ "$($BB cat /data/.b--b/reset_profiles)" != "$RESET_MAGIC" ]; then
-		if [ ! -e /data/.b--b_old ]; then
-			$BB mkdir /data/.b--b_old;
+	if [ "$($BB cat /data/.alucard/reset_profiles)" != "$RESET_MAGIC" ]; then
+		if [ ! -e /data/.alucard_old ]; then
+			$BB mkdir /data/.alucard_old;
 		fi;
-		$BB cp -a /data/.b--b/*.profile /data/.b--b_old/;
-		$BB rm -f /data/.b--b/*.profile;
+		$BB cp -a /data/.alucard/*.profile /data/.alucard_old/;
+		$BB rm -f /data/.alucard/*.profile;
 		if [ -e /data/data/com.af.synapse/databases ]; then
 			$BB rm -R /data/data/com.af.synapse/databases;
 		fi;
-		$BB echo "$RESET_MAGIC" > /data/.b--b/reset_profiles;
+		$BB echo "$RESET_MAGIC" > /data/.alucard/reset_profiles;
 	else
-		$BB echo "no need to reset profiles or delete .b--b folder";
+		$BB echo "no need to reset profiles or delete .alucard folder";
 	fi;
 else
-	# Clean /data/.b--b/ folder from all files to fix any mess but do it in smart way.
-	if [ -e /data/.b--b/"$PROFILE".profile ]; then
-		$BB cp /data/.b--b/"$PROFILE".profile /sdcard/"$PROFILE".profile_backup;
+	# Clean /data/.alucard/ folder from all files to fix any mess but do it in smart way.
+	if [ -e /data/.alucard/"$PROFILE".profile ]; then
+		$BB cp /data/.alucard/"$PROFILE".profile /sdcard/"$PROFILE".profile_backup;
 	fi;
-	if [ ! -e /data/.b--b_old ]; then
-		$BB mkdir /data/.b--b_old;
+	if [ ! -e /data/.alucard_old ]; then
+		$BB mkdir /data/.alucard_old;
 	fi;
-	$BB cp -a /data/.b--b/* /data/.b--b_old/;
-	$BB rm -f /data/.b--b/*
+	$BB cp -a /data/.alucard/* /data/.alucard_old/;
+	$BB rm -f /data/.alucard/*
 	if [ -e /data/data/com.af.synapse/databases ]; then
 		$BB rm -R /data/data/com.af.synapse/databases;
 	fi;
 	$BB echo "$CLEAN_ALU_DIR" > /data/reset_alu_dir;
-	$BB echo "$RESET_MAGIC" > /data/.b--b/reset_profiles;
-	$BB echo "$PROFILE" > /data/.b--b/.active.profile;
+	$BB echo "$RESET_MAGIC" > /data/.alucard/reset_profiles;
+	$BB echo "$PROFILE" > /data/.alucard/.active.profile;
 fi;
 
-[ ! -f /data/.b--b/default.profile ] && $BB cp -a /res/customconfig/default.profile /data/.b--b/default.profile;
-[ ! -f /data/.b--b/battery.profile ] && $BB cp -a /res/customconfig/battery.profile /data/.b--b/battery.profile;
-[ ! -f /data/.b--b/performance.profile ] && $BB cp -a /res/customconfig/performance.profile /data/.b--b/performance.profile;
-[ ! -f /data/.b--b/extreme_performance.profile ] && $BB cp -a /res/customconfig/extreme_performance.profile /data/.b--b/extreme_performance.profile;
-[ ! -f /data/.b--b/extreme_battery.profile ] && $BB cp -a /res/customconfig/extreme_battery.profile /data/.b--b/extreme_battery.profile;
+[ ! -f /data/.alucard/default.profile ] && $BB cp -a /res/customconfig/default.profile /data/.alucard/default.profile;
+[ ! -f /data/.alucard/battery.profile ] && $BB cp -a /res/customconfig/battery.profile /data/.alucard/battery.profile;
+[ ! -f /data/.alucard/performance.profile ] && $BB cp -a /res/customconfig/performance.profile /data/.alucard/performance.profile;
+[ ! -f /data/.alucard/extreme_performance.profile ] && $BB cp -a /res/customconfig/extreme_performance.profile /data/.alucard/extreme_performance.profile;
+[ ! -f /data/.alucard/extreme_battery.profile ] && $BB cp -a /res/customconfig/extreme_battery.profile /data/.alucard/extreme_battery.profile;
 
-$BB chmod -R 0777 /data/.b--b/;
+$BB chmod -R 0777 /data/.alucard/;
 
 . /res/customconfig/customconfig-helper;
 read_defaults;
 read_config;
 
 # Load parameters for Synapse
-DEBUG=/data/.b--b/;
+DEBUG=/data/.alucard/;
 BUSYBOX_VER=$(/sbin/bb/busybox | $BB grep "BusyBox v" | $BB cut -c0-15);
 $BB echo "$BUSYBOX_VER" > $DEBUG/busybox_ver;
 
 # start CORTEX by tree root, so it's will not be terminated.
 $BB sed -i "s/cortexbrain_background_process=[0-1]*/cortexbrain_background_process=1/g" /sbin/ext/cortexbrain-tune.sh;
 if [ "$($BB pgrep -f "cortexbrain-tune.sh" | $BB wc -l)" -eq "0" ]; then
-	$BB nohup /sbin/bb/sh /sbin/ext/cortexbrain-tune.sh > /data/.b--b/cortex.txt &
+	$BB nohup /sbin/bb/sh /sbin/ext/cortexbrain-tune.sh > /data/.alucard/cortex.txt &
 fi;
 
 OPEN_RW;
@@ -258,11 +258,11 @@ OPEN_RW;
 $BB chmod -R 755 /system/etc/init.d/;
 if [ "$init_d" == "on" ]; then
 	(
-		$BB nohup /sbin/bb/run-parts /system/etc/init.d/ > /data/.b--b/init.d.txt &
+		$BB nohup /sbin/bb/run-parts /system/etc/init.d/ > /data/.alucard/init.d.txt &
 	)&
 else
 	if [ -e /system/etc/init.d/99SuperSUDaemon ]; then
-		$BB nohup /sbin/bb/sh /system/etc/init.d/99SuperSUDaemon > /data/.b--b/root.txt &
+		$BB nohup /sbin/bb/sh /system/etc/init.d/99SuperSUDaemon > /data/.alucard/root.txt &
 	else
 		$BB echo "no root script in init.d";
 	fi;
@@ -308,8 +308,8 @@ fi;
 	$BB sleep 30;
 
 	# get values from profile
-	PROFILE=$($BB cat /data/.b--b/.active.profile);
-	. /data/.b--b/"$PROFILE".profile;
+	PROFILE=$($BB cat /data/.alucard/.active.profile);
+	. /data/.alucard/"$PROFILE".profile;
 
 	# Reload usb driver to open MTP and fix fast charge.
 	#CHARGER_STATE=$(cat /sys/class/power_supply/battery/batt_charging_source);
