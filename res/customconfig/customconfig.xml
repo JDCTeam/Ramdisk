@@ -760,25 +760,25 @@
 			<spinnerItem name="simple" value="simple"/>
 		</spinner>
 
-		<spinner description="This it is the max value of GPU frequency. (Default: 320.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+		<spinner description="This it is the max value of GPU frequency. (Default: 450.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
-		<spinner description="This it is the min value of GPU frequency. (Default: 118.000 kHz)" name="GPU Min Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/min_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+		<spinner description="This it is the min value of GPU frequency. (Default: 128.000 kHz)" name="GPU Min Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/min_pwrlevel">
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
 		<spinner description="This it is the thermal value of GPU frequency. (Default: 450.000 kHz)" name="GPU thermal Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/thermal_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
 	</settingsPane>
