@@ -15,9 +15,6 @@
 	<settingsPane description="The following settings are for all global CPU configuration, use it only if you know what you are doing." name="CPU Global Settings">
 
 		<spinner description="Maximum CPU-Speed for CPU0. CPU Frequency steps from 384.000 kHz to 1.890.000 kHz! (Default: 1.890.000 kHz)" name="Max Normal Frequency" action="scaling_max_freq_cpu0">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -36,9 +33,6 @@
 		</spinner>
 
 		<spinner description="Maximum CPU-Speed for CPU1. CPU Frequency steps from 384.000 kHz to 1.890.000 kHz! (Default: 1.890.000 kHz)" name="Max Normal Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_max_freq_cpu1">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -57,9 +51,6 @@
 		</spinner>
 
 		<spinner description="Maximum CPU-Speed for CPU2. CPU Frequency steps from 384.000 kHz to 1.890.000 kHz! (Default: 1.890.000 kHz)" name="Max Normal Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_max_freq_cpu2">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -78,9 +69,6 @@
 		</spinner>
 
 		<spinner description="Maximum CPU-Speed for CPU3. CPU Frequency steps from 384.000 kHz to 1.890.000 kHz! (Default: 1.890.000 kHz)" name="Max Normal Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_max_freq_cpu3">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -99,9 +87,6 @@
 		</spinner>
 
 		<spinner description="Minimum CPU-Speed for CPU0. CPU Frequency step from 384.000 kHz to 1.890.000 kHz! (Default: 384.000 kHz)" name="Min Frequency" action="scaling_min_freq_cpu0">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -120,9 +105,6 @@
 		</spinner>
 
 		<spinner description="Minimum CPU-Speed for CPU1. CPU Frequency step from 384.000 kHz to 1.890.000 kHz! (Default: 384.000 kHz)" name="Min Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_min_freq_cpu1">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -141,9 +123,6 @@
 		</spinner>
 
 		<spinner description="Minimum CPU-Speed for CPU2. CPU Frequency step from 384.000 kHz to 1.890.000 kHz! (Default: 384.000 kHz)" name="Min Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_min_freq_cpu2">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -162,9 +141,6 @@
 		</spinner>
 
 		<spinner description="Minimum CPU-Speed for CPU3. CPU Frequency step from 384.000 kHz to 1.890.000 kHz! (Default: 384.000 kHz)" name="Min Frequency" action="genericfreq /sys/devices/system/cpu/cpufreq/all_cpus/scaling_min_freq_cpu3">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -193,9 +169,6 @@
 		<checkbox description="Enable or disable Power-efficient work queues will help to reduce power consumption at the cost of slight performance overhead. By enabling this, PE work queues are used for unbound scheduled work to save load on sibling CPU cores and queuing work on CPU 0." name="Power-efficient work queues"  action="generic01 /sys/module/workqueue/parameters/power_efficient" label="Power-efficient work queues"/>
 
 		<spinner description="Maximum CPUs speed while using GPS. (Default: 1242.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -214,9 +187,6 @@
 		</spinner>
 
 		<spinner description="Maximum DEEP SLEEP CPUs speed. (Default: 1242.000 kHz)." name="scaling_max_suspend_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_suspend_freq">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -235,9 +205,6 @@
 		</spinner>
 
 		<spinner description="Maximum ON CALL CPUs speed. (Default: 1350.000 kHz). When phone is on call and suspended." name="scaling_max_oncall_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_oncall_freq">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -256,9 +223,6 @@
 		</spinner>
 
 		<spinner description="Minimum DEEP SLEEP CPUs speed. (Default: 384.000 kHz)." name="scaling_min_suspend_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_min_suspend_freq">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -381,9 +345,6 @@
 		<seekBar description="After spending sampling_down_factor X sampling_rate micro seconds at maximum frequency on high load, governor samples the load again to calculate an approx target frequency to scale-down-to which should not trigger up_threshold in the next sample. (Triggering up threshold may cause jumping to max frequency again). Max_load_freq is checked against (up_threshold - down_differential) X current frequency. If found to be smaller, CPU is scaled down to a target frequency as described above. Down_differential also act as the factor to prevent aggressive scale down. (Only for HYPER, Ondemand, PegasusQ) (default: 5)" name="down_differential" action="generic_cortex /tmp/down_differential" unit="int" min="1" reversed="false" step="1" max="80"/>
 
 		<spinner description="Until freq_for_responsiveness, Up Threshold considered for sampling load is up_threshold_at_min_freq. Also during the part where CPU is at maximum load frequency, governor need to find the optimal frequency as the next frequency - which should not trigger up_threshold in the next sampling. When such a frequency_next is found to be a) less than freq_for_responsiveness b) will not trigger down_threshold in the next sample, then the optimal frequency is set to freq_for_responsiveness. (Only for HYPER, PegasusQ, Nightmare) (Default: 486.000 kHz)" name="freq_for_responsiveness" action="generic_cortex /tmp/freq_for_responsiveness">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -416,9 +377,6 @@
 		<seekBar description="The frequency at which governor scales CPU down. Load less than dec_cpu_load: cpu scaled down. (Only for Nightmare, Alucard). (Default: 70%)" name="dec_cpu_load" action="generic_cortex /tmp/dec_cpu_load" unit="%" min="10" reversed="false" step="1" max="100"/>
 
 		<spinner description="When current freq is greater than freq_for_responsiviness_max, freq_step_dec will be equal to freq_step_dec_at_max_freq. (Only for Nightmare). (Default: 1890.000 kHz)" name="freq_for_responsiveness_max" action="generic_cortex /tmp/freq_for_responsiveness_max">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -437,9 +395,6 @@
 		</spinner>
 
 		<spinner description="Until freq_responsiveness, Up Threshold considered for sampling load is inc_cpu_load_at_min_freq. Also during the part where CPU is at maximum load frequency, governor need to find the optimal frequency as the next frequency - which should not trigger up_threshold in the next sampling. When such a frequency_next is found to be a) less than freq_responsiveness b) will not trigger down_threshold in the next sample, then the optimal frequency is set to freq_responsiveness. (Only for Alucard) (Default: 1134.000 kHz)" name="freq_responsiveness" action="generic_cortex /tmp/freq_responsiveness">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -539,9 +494,6 @@
 		<seekBar description="Number of samples to evaluate cpu3 hotplug out. (Default: 2)" name="hotplug_rate_4_0" action="generic /sys/kernel/alucard_hotplug/hotplug_rate_4_0" unit="int" min="1" reversed="false" step="1" max="10"/>
 
 		<spinner description="Up threshold frequency to turn second core On, when some other conditions is also met. ie If (minimum frequency greater than or equal to hotplug_freq 1 1) Hotplug IN Second Core. Higher value corresponds to delay in turning on second core. (Default: 1242.000 kHz)" name="hotplug_freq_1_1" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_1_1">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -560,9 +512,6 @@
 		</spinner>
 
 		<spinner description="Down threshold frequency to turn second core Off, when some other conditions is also met. ie If (maximum frequency less than hotplug_freq 2 0) Hotplug OUT Second Core. Lower value corresponds to delay in turning off second core. (Default: 810.000 kHz)" name="hotplug_freq_2_0" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_2_0">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -581,9 +530,6 @@
 		</spinner>
 
 		<spinner description="Up threshold frequency to turn third core On, when some other conditions is also met. ie If (minimum frequency greater than or equal to hotplug_freq 2 1) Hotplug IN Third Core. Higher value corresponds to delay in turning on Third core. (Default: 1242.000 kHz)" name="hotplug_freq_2_1" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_2_1">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -602,9 +548,6 @@
 		</spinner>
 
 		<spinner description="Down threshold frequency to turn third core Off, when some other conditions is also met. ie If (maximum frequency less than hotplug_freq 3 0) Hotplug OUT Third Core. Lower value corresponds to delay in turning off third core. (Default: 810.000 kHz)" name="hotplug_freq_3_0" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_3_0">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -623,9 +566,6 @@
 		</spinner>
 
 		<spinner description="Up threshold frequency to turn fourth core On, when some other conditions is also met. ie If (minimum frequency greater than or equal to hotplug_freq 3 1) Hotplug IN Fourth Core. Higher value corresponds to delay in turning on Fourth core. (Default: 1242.000 kHz)" name="hotplug_freq_3_1" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_3_1">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -644,9 +584,6 @@
 		</spinner>
 
 		<spinner description="Down threshold frequency to turn fourth core Off, when some other conditions is also met. ie If (maximum frequency less than hotplug_freq 4 0) Hotplug OUT Fourth Core. Lower value corresponds to delay in turning off fourth core. (Default: 810.000 kHz)" name="hotplug_freq_4_0" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_4_0">
-			<spinnerItem name="2.214.000 kHz-OVERCLOCKED" value="2214000"/>
-			<spinnerItem name="2.106.000 kHz-OVERCLOCKED" value="2106000"/>
-			<spinnerItem name="1.998.000 kHz-OVERCLOCKED" value="1998000"/>
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -754,31 +691,30 @@
 
 	<settingsPane description="Tune GPU" name="Gpu Tuning">
 
-		<spinner description="This will set GPU governor. (Default: simple)" name="GPU Governor" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor">
+		<spinner description="This will set GPU governor. (Default: ondemand)" name="GPU Governor" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor">
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="performance" value="performance"/>
-			<spinnerItem name="simple" value="simple"/>
 		</spinner>
 
-		<spinner description="This it is the max value of GPU frequency. (Default: 320.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+		<spinner description="This it is the max value of GPU frequency. (Default: 450.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
-		<spinner description="This it is the min value of GPU frequency. (Default: 118.000 kHz)" name="GPU Min Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/min_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+		<spinner description="This it is the min value of GPU frequency. (Default: 128.000 kHz)" name="GPU Min Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/min_pwrlevel">
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
 		<spinner description="This it is the thermal value of GPU frequency. (Default: 450.000 kHz)" name="GPU thermal Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/thermal_pwrlevel">
-			<spinnerItem name="520.000 kHz-OVERCLOCKED" value="0"/>
-			<spinnerItem name="450.000 kHz" value="1"/>
-			<spinnerItem name="320.000 kHz" value="2"/>
-			<spinnerItem name="118.000 kHz" value="3"/>
+			<spinnerItem name="450.000 kHz" value="0"/>
+			<spinnerItem name="320.000 kHz" value="1"/>
+			<spinnerItem name="200.000 kHz" value="2"/>
+			<spinnerItem name="128.000 kHz" value="3"/>
 		</spinner>
 
 	</settingsPane>
@@ -835,7 +771,7 @@
 			<spinnerItem name="MMC Power Save" value="power_save"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ZEN )" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW )" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -846,7 +782,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ZEN )" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW )" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
