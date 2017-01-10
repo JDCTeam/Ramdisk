@@ -660,9 +660,7 @@
 	<settingsPane description="Tune the msm thermal module" name="MSM Thermal Tuning">
 
 		<spinner description="CPU Thermal control, Can be Default driver without controls, or Intelli thermal driver with controls below or Dual Intelligent Thermal driver with controls below and ROM thermal control, its will limit CPU frequency when CPU reach the max limit heat, till cooled and restore full power, this can help with too hot phone playing games! intelli driver is more aggressive and drop freq to 1.4 then to 1.2 then to 1.1ghz that will reduce performance in all bench apps! defaut will lock on 1.9Ghz most of the time, and burn the fingers but give you more SCORE to show off." name="CPU Temp Control" action="msm_thermal">
-			<spinnerItem name="Default Temp Control" value="msm_temp"/> 
 			<spinnerItem name="Intelli Temp Control" value="intelli_temp"/>
-			<spinnerItem name="Intelli Temp Control Dual" value="intelli_temp_dual"/>
 		</spinner>
 
 		<spinner description="Hotplug CPU Thermal control main switch, this allow to shutdown cores 1,2,3 and leave core 0 as main core on high frequency. but it reduces global performance on high temp, if set disabled then all CPU cores will be online and operate at lower frequencies when the temperature is high!" name="HotPlug Thermal CPU Control" action="generic /sys/module/msm_thermal/core_control/core_control">
