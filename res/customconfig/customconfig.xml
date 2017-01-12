@@ -760,7 +760,7 @@
 
 	<settingsPane description="Tune IO settings managed by Kernel" name="IO Tuning">
 
-		<seekBar description="Maximum number of kilobytes to read-ahead for INTERNAL SDCARD! file systems on this device. (Default: 2048 kB)" name="kilobytes to read-ahead" action="generic_cortex /tmp/intsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
+		<seekBar description="Maximum number of kilobytes to read-ahead for INTERNAL SDCARD! file systems on this device. (Default: 1024 kB)" name="kilobytes to read-ahead" action="generic_cortex /tmp/intsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
 
 		<seekBar description="Maximum number of kilobytes to read-ahead for EXTERNAL SDCARD! file systems on this device. (Default: 1024 kB)" name="kilobytes to read-ahead" action="generic_cortex /tmp/extsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
 
