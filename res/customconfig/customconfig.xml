@@ -511,7 +511,7 @@
 			<spinnerItem name="384.000 kHz" value="384000"/> 
 		</spinner>
 
-		<spinner description="Down threshold frequency to turn second core Off, when some other conditions is also met. ie If (maximum frequency less than hotplug_freq 2 0) Hotplug OUT Second Core. Lower value corresponds to delay in turning off second core. (Default: 486.000 kHz)" name="hotplug_freq_2_0" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_2_0">
+		<spinner description="Down threshold frequency to turn second core Off, when some other conditions is also met. ie If (maximum frequency less than hotplug_freq 2 0) Hotplug OUT Second Core. Lower value corresponds to delay in turning off second core. (Default: 810.000 kHz)" name="hotplug_freq_2_0" action="genericfreq /sys/kernel/alucard_hotplug/hotplug_freq_2_0">
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -750,7 +750,7 @@
 
 	<settingsPane description="Set Boost Touch nr. cpus" name="Touch Boost Cpus">
 
-		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 2 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
+		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 1 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
 
 	</settingsPane>
 
@@ -865,7 +865,7 @@
 			<spinnerItem name="ZRAM OFFLINE" value="0"/>
 		</spinner>
 
-		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 60)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
+		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 50)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
 
 	</settingsPane>
 
