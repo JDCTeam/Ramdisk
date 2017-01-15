@@ -178,7 +178,6 @@ usb_charge_level=460
 tcp_congestion_control=cubic
 logger=1
 gpsfixer=off
-disablelogcat=off
 gpsregion=No_GPS_Zone_changes
 init_d=off
 pwm_value=75
