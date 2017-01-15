@@ -306,36 +306,11 @@ if [ "$($BB cat /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/qu
 	$BB echo "1" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/rq_affinity;
 fi;
 
-(
-	$BB sleep 30;
-
-	# get values from profile
-	PROFILE=$($BB cat /data/.b--b/.active.profile);
-	. /data/.b--b/"$PROFILE".profile;
-
-	# Reload usb driver to open MTP and fix fast charge.
-	#CHARGER_STATE=$(cat /sys/class/power_supply/battery/batt_charging_source);
-	#if [ "$CHARGER_STATE" -gt "1" ]; then
-	#		stop adbd
-	#		sleep 1;
-	#		start adbd
-	#fi;
-
-	# Update UKSM in case ROM changed to other setting.
-	if [ "$run" == "on" ]; then
-		$BB echo "1" > /sys/kernel/mm/uksm/run;
-	else
-		$BB echo "0" > /sys/kernel/mm/uksm/run;
-	fi;
-	$BB echo "$sleep_millisecs" > /sys/kernel/mm/uksm/sleep_millisecs;
-	$BB echo "10" > /sys/kernel/mm/uksm/max_cpu_percentage;
-
-	# stop core control if need to
-	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
-
+GOOGLE_SERVICE_BD_FIXER()
+{
 	# Google Services battery drain fixer by BySezerSimsek
 	# http://forum.xda-developers.com/lg-g5/development/h850-genisys-rom-1-0-genisys-theme-1-0-t3421950
-	if [ "$gpsfixer" == "yes" ]; then
+	if [ "$gpsfixer" == "on" ]; then
 		$BB echo "Google Play Service just started!"
 		pm disable com.google.android.gms/.ads.settings.AdsSettingsActivity
 		pm disable com.google.android.gms/com.google.android.location.places.ui.aliaseditor.AliasEditorActivity
@@ -442,8 +417,44 @@ fi;
 		pm disable com.google.android.gsf/.checkin.EventLogService
 		pm disable com.google.android.gsf/.update.SystemUpdateService
 	fi;
+}
 
-	if [ "$disablelogcat" == "yes" ]; then
+if [ "$stweaks_boot_control" == "yes" ]; then
+
+	# Google Services battery drain fixer by BySezerSimsek
+	GOOGLE_SERVICE_BD_FIXER;
+fi;
+	
+(
+	$BB sleep 30;
+
+	# get values from profile
+	PROFILE=$($BB cat /data/.b--b/.active.profile);
+	. /data/.b--b/"$PROFILE".profile;
+
+	# Reload usb driver to open MTP and fix fast charge.
+	#CHARGER_STATE=$(cat /sys/class/power_supply/battery/batt_charging_source);
+	#if [ "$CHARGER_STATE" -gt "1" ]; then
+	#		stop adbd
+	#		sleep 1;
+	#		start adbd
+	#fi;
+
+	# Update UKSM in case ROM changed to other setting.
+	if [ "$run" == "on" ]; then
+		$BB echo "1" > /sys/kernel/mm/uksm/run;
+	else
+		$BB echo "0" > /sys/kernel/mm/uksm/run;
+	fi;
+	$BB echo "$sleep_millisecs" > /sys/kernel/mm/uksm/sleep_millisecs;
+	$BB echo "10" > /sys/kernel/mm/uksm/max_cpu_percentage;
+
+	# stop core control if need to
+	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
+
+
+
+	if [ "$disablelogcat" == "on" ]; then
 		setprop logcat.live disable
 		$BB rm -f /dev/log/main
 		setprop debugtool.anrhistory 0
