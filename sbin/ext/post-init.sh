@@ -423,15 +423,7 @@ if [ "$stweaks_boot_control" == "yes" ]; then
 
 	# Google Services battery drain fixer by BySezerSimsek
 	GOOGLE_SERVICE_BD_FIXER;
-	if [ "$disablelogcat" == "on" ]; then
-		setprop logcat.live disable
-		$BB rm -f /dev/log/main
-		setprop debugtool.anrhistory 0
-		setprop profiler.debugmonitor false
-		setprop profiler.launch false
-		setprop profiler.hung.dumpdobugreport false
-		setprop persist.android.strictmode 0
-	fi;	
+	
 fi;
 	
 (
