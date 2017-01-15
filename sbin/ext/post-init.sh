@@ -311,7 +311,7 @@ GOOGLE_SERVICE_BD_FIXER()
 	# Google Services battery drain fixer by BySezerSimsek
 	# http://forum.xda-developers.com/lg-g5/development/h850-genisys-rom-1-0-genisys-theme-1-0-t3421950
 	if [ "$gpsfixer" == "on" ]; then
-		$BB echo "Google Play Service just started!"
+		$BB echo "Google Play Service fix just started!"
 		pm disable com.google.android.gms/.ads.settings.AdsSettingsActivity
 		pm disable com.google.android.gms/com.google.android.location.places.ui.aliaseditor.AliasEditorActivity
 		pm disable com.google.android.gms/com.google.android.location.places.ui.aliaseditor.AliasEditorMapActivity
@@ -423,6 +423,15 @@ if [ "$stweaks_boot_control" == "yes" ]; then
 
 	# Google Services battery drain fixer by BySezerSimsek
 	GOOGLE_SERVICE_BD_FIXER;
+	if [ "$disablelogcat" == "on" ]; then
+		setprop logcat.live disable
+		$BB rm -f /dev/log/main
+		setprop debugtool.anrhistory 0
+		setprop profiler.debugmonitor false
+		setprop profiler.launch false
+		setprop profiler.hung.dumpdobugreport false
+		setprop persist.android.strictmode 0
+	fi;	
 fi;
 	
 (
@@ -452,17 +461,6 @@ fi;
 	# stop core control if need to
 	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
 
-
-
-	if [ "$disablelogcat" == "on" ]; then
-		setprop logcat.live disable
-		$BB rm -f /dev/log/main
-		setprop debugtool.anrhistory 0
-		setprop profiler.debugmonitor false
-		setprop profiler.launch false
-		setprop profiler.hung.dumpdobugreport false
-		setprop persist.android.strictmode 0
-	fi;	
 	
 	# script finish here, so let me know when
 	TIME_NOW=$(date)
