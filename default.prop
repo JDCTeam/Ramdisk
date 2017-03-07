@@ -29,6 +29,6 @@ debug.atrace.tags.enableflags=0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Sat 4 Mar 15:42:20 EET 2017
-ro.bootimage.build.date.utc=1488634940
+ro.bootimage.build.date=Tue 7 Mar 11:33:16 EET 2017
+ro.bootimage.build.date.utc=1488879196
 persist.sys.usb.config=adb
