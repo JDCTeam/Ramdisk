@@ -51,6 +51,12 @@ on fs
     setprop ro.product.name jgedlteue
 
 on post-fs-data
+
+    write /sys/devices/system/cpu/cpu0 1
+    write /sys/devices/system/cpu/cpu1 1
+    write /sys/devices/system/cpu/cpu2 1
+    write /sys/devices/system/cpu/cpu3 1
+    
     # Create directories for tombstone
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
