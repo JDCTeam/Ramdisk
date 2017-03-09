@@ -1,13 +1,11 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 input keyevent 26
-$BB sync
-$BB sync
+sync
+sync
 stop
-$BB mount -o remount,ro /system;
-$BB echo "rebooting to recovery now"
-$BB sleep 3;
+/sbin/busybox mount -o remount,ro /system;
+echo "rebooting to recovery now"
+sleep 3;
 reboot recovery
 

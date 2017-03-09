@@ -1,8 +1,6 @@
-#!/sbin/bb/busybox sh
+#!/sbin/busybox sh
 
-BB=/sbin/bb/busybox
-
-$BB cat << CTAG
+cat << CTAG
 {
 	name:STATUS,
 		elements:[

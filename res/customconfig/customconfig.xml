@@ -168,7 +168,7 @@
 
 		<checkbox description="Enable or disable Power-efficient work queues will help to reduce power consumption at the cost of slight performance overhead. By enabling this, PE work queues are used for unbound scheduled work to save load on sibling CPU cores and queuing work on CPU 0." name="Power-efficient work queues"  action="generic01 /sys/module/workqueue/parameters/power_efficient" label="Power-efficient work queues"/>
 
-		<spinner description="Maximum CPUs speed while using GPS. (Default: 1890.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
+		<spinner description="Maximum CPUs speed while using GPS. (Default: 1242.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -252,7 +252,7 @@
 
 		<button description="Use this button to see what CPU Voltage is used right now!" name="Check Active CPU Voltage" action="push-actions/check_cpu_voltage" label="Check CPU Voltage"/>
 
-		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 1890.000 kHz" action="cpu-voltage 1" unit="µV" min="1062500" reversed="false" step="12500" max="1300000"/>
+		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 189.000 kHz" action="cpu-voltage 1" unit="µV" min="1062500" reversed="false" step="12500" max="1300000"/>
 
 		<seekBar description="CPU Voltage for 1782.000 kHz." name="CPU Voltage 1782.000 kHz" action="cpu-voltage 2" unit="µV" min="1012500" reversed="false" step="12500" max="1225000"/>
 
@@ -290,7 +290,7 @@
 
 	<settingsPane description="Set advanced governor settings. These settings are active only if the screen is on." name="Governor Parameters tuning">
 
-		<spinner description="This will set the CPU0 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="scaling_governor_cpu0">
+		<spinner description="This will set the CPU0 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="scaling_governor_cpu0">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -299,7 +299,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU1 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu1">
+		<spinner description="This will set the CPU1 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu1">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -308,7 +308,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU2 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu2">
+		<spinner description="This will set the CPU2 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu2">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -317,7 +317,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU3 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu3">
+		<spinner description="This will set the CPU3 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu3">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -336,7 +336,7 @@
 
 		<seekBar description="This threshold is used as up threshold while sampling at frequencies less than freq_for_responsiveness. Above that, normal up_threshold is used. This gives the option to make scaling aggressive or relaxed until a frequency and normal for higher frequencies. Again, during calculation of optimal frequency which should not trigger up policy, down threshold to consider is difference between up_threshold_at_min_freq and down_differential. (Only for HYPER, Ondemand and PegasusQ) (Default: 60%)" name="up_threshold_at_min_freq" action="generic_cortex /tmp/up_threshold_at_min_freq" unit="%" min="1" reversed="false" step="1" max="100"/>
 
-		<seekBar description="Sampling Interval, measured in µs. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 20.000 µs)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="µs" min="10000" reversed="false" step="5000" max="200000"/>
+		<seekBar description="Sampling Interval, measured in µs. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 50.000 µs)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="µs" min="10000" reversed="false" step="5000" max="200000"/>
 
 		<seekBar description="Acts as a multiplier for sampling interval for re-evaluating the load when CPU is truly busy and is on highest clock frequency (policy max). Setting to 1 makes no difference and causes CPU to immediately scale down from highest frequency. Sampling down factor is NOT valid for lower frequencies and low load conditions. Note that CPU is scaled up to max frequency when max_load_freq is greater than up_threshold X current frequency. (or to cur_freq + (freq_step X policy.max_freq) whichever is smaller) Max_load_freq is an arbitrary frequency calculated as the maximum of load_frequencies. (Only for HYPER, Ondemand, PegasusQ, Conservartive) (Default: 1)" name="sampling_down_factor" action="generic_cortex /tmp/sampling_down_factor" unit="int" min="1" reversed="false" step="1" max="10"/>
 
@@ -660,7 +660,9 @@
 	<settingsPane description="Tune the msm thermal module" name="MSM Thermal Tuning">
 
 		<spinner description="CPU Thermal control, Can be Default driver without controls, or Intelli thermal driver with controls below or Dual Intelligent Thermal driver with controls below and ROM thermal control, its will limit CPU frequency when CPU reach the max limit heat, till cooled and restore full power, this can help with too hot phone playing games! intelli driver is more aggressive and drop freq to 1.4 then to 1.2 then to 1.1ghz that will reduce performance in all bench apps! defaut will lock on 1.9Ghz most of the time, and burn the fingers but give you more SCORE to show off." name="CPU Temp Control" action="msm_thermal">
+			<spinnerItem name="Default Temp Control" value="msm_temp"/> 
 			<spinnerItem name="Intelli Temp Control" value="intelli_temp"/>
+			<spinnerItem name="Intelli Temp Control Dual" value="intelli_temp_dual"/>
 		</spinner>
 
 		<spinner description="Hotplug CPU Thermal control main switch, this allow to shutdown cores 1,2,3 and leave core 0 as main core on high frequency. but it reduces global performance on high temp, if set disabled then all CPU cores will be online and operate at lower frequencies when the temperature is high!" name="HotPlug Thermal CPU Control" action="generic /sys/module/msm_thermal/core_control/core_control">
@@ -692,6 +694,7 @@
 		<spinner description="This will set GPU governor. (Default: ondemand)" name="GPU Governor" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor">
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="performance" value="performance"/>
+			<spinnerItem name="simple" value="simple"/> 
 		</spinner>
 
 		<spinner description="This it is the max value of GPU frequency. (Default: 450.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
@@ -750,7 +753,7 @@
 
 	<settingsPane description="Set Boost Touch nr. cpus" name="Touch Boost Cpus">
 
-		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 1 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
+		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 2 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
 
 	</settingsPane>
 
@@ -769,7 +772,7 @@
 			<spinnerItem name="MMC Power Save" value="power_save"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for internal sdcard. (Default: ROW)" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -780,7 +783,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for external sdcard. (Default: ROW)" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -805,8 +808,8 @@
 
 		<seekBar description="Adaptive LMK trigger point, when ram pressure is higher than set here, LMK is ordered to release RAM fast and allow fast load of something BIG to memory, we see it as fast app load and less LAG. lower the value, then more apps killed from RAM and with less actual need. for best performance keep it in range of 85 to 90%" name="Adaptive LMK Pressure Range" action="generic /sys/module/lowmemorykiller/parameters/vm_pressure_adaptive_start" unit="%" min="75" reversed="false" step="1" max="94"/>
 
-		<seekBar description="When RAM pressure is higher than set above, and RAM is lower than set here, kernel will start releasing RAM by stopping background apps. Value calculation here is based on this formula PR * 4096 (example: 68 * 4096 = 278MB free RAM) default 68 PR" name="Adaptive LMK Lowest RAM Allowed"
-                        action="vmpressure_file_min" unit="PR" min="65" reversed="false" step="1" max="78"/>
+		<seekBar description="When RAM pressure is higher than set above, and RAM is lower than set here, kernel will start releasing RAM by stopping background apps. Value calculation here is based on this formula PR * 4096 (example: 72 * 4096 = 294MB free RAM) default 72 PR" name="Adaptive LMK Lowest RAM Allowed"
+                        action="vmpressure_file_min" unit="PR" min="65" reversed="false" step="1" max="80"/>
 
 		<checkbox description="Control for kernel process memory reclaim, it help to reduce used RAM of each APP that loaded in background. when vm memory pressure jump higher and system needs RAM for something BIG to load, process reclaim start to shrink used RAM by background APPS, it also shrink the ZRAM swap if enabled in order to reduce cpu power usage if RAM is free." name="Process Memory Reclaim" action="generic01 /sys/module/process_reclaim/parameters/enable_process_reclaim" label="Process Reclaim"/>
 
@@ -865,7 +868,7 @@
 			<spinnerItem name="ZRAM OFFLINE" value="0"/>
 		</spinner>
 
-		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 50)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
+		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 60)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
 
 	</settingsPane>
 
@@ -887,52 +890,7 @@
 				<spinnerItem name="No Power (idle)" value="quiet"/> 
 			</spinner>
 
-			<seekBar description="The lower is set, more RAM we can gain at cost of slight performance (Default: 1000 ms)." name="UKSM Scan Delay Interval"
-			action="generic /sys/kernel/mm/uksm/sleep_millisecs" unit="ms" min="50" reversed="false" step="50" max="1000"/>
-
-	</settingsPane>
-
-</settingsTab>
-
-<settingsTab name="Cron Tasks">
-
-	<settingsPane description="Activate some scripts which automatically runs in the background at the specified time." name="Cron">
-
-		<spinner description="Cron Tasks Main Switch. If you set this OFF, then all tasks below will have no effect." name="Cron Task Master Switch"
-			action="crontab_switch">
-			<spinnerItem name="ON" value="on"/>
-			<spinnerItem name="OFF" value="off"/>
-		</spinner>
-
-		<button description="Use this button to test, if this Cron Task service is ONLINE and supported. Make sure that Main Switch is ON." name="Test Cron Task Service" action="push-actions/crontab_test" label="Test Cron Task Service"/>
-
-		<button description="Use this button to RESET the scripts and jobs from kernel and refresh the configuration. Note that it will clear all your custom changes!" name="CRON Resetter" action="push-actions/crontab_reset" label="Reset Cron"/>
-
-		<checkbox description="Cron that clears file-cache every 3 hours, but only if CPU is in idle and when more than 50% of memory is used. This will free RAM from unused buffers and cache." name="Clear file-cache"
-			action="generic_cortex /tmp/cron_drop_cache" label="Clear RAM cache every 3 hours"/>
-
-		<checkbox description="Cron that reset SystemUI memory usage and release locked RAM that can't be freed by kernel, SystemUI service will automatically restart after 5 sec and use from 70 to 90 MiB memory less than before." name="Reset SystemUI"
-			action="generic_cortex /tmp/cron_reset_systemui" label="Reset SystemUI every 02:00 AM"/>
-
-		<checkbox description="Enable Trim of System, Data and Cache partitions every day at 10:00 PM to speed up NAND Read and Write Access Time. NOTE that screen will be AWAKE during the fstrim to prevent MMC crash, then if screen was OFF it's will be auto turned off. Some devices don't like to be trimmed, so if device get stuck after 10:00 PM, don't enable this." name="Trim system, data and cache"
-			action="generic_cortex /tmp/cron_fstrim" label="Trim every day at 10:00 PM"/>
-
-		<checkbox description="Enable reclaiming RAM from apps. It's smart memory kernel feature used to take back all cached RAM from apps without killing them. It helps to maintain stable and fast device for a long time. Task will run in every 3 hours." name="Reclaime RAM from apps"
-			action="generic_cortex /tmp/cron_process_reclaim" label="Reclaim RAM from apps in every 3 hours"/>
-
-		<checkbox description="Enable restarting Google Service to prevent memory leaks and CPU nonstop activity. This is one of the MAIN LP RAM leak BUGS. Service gets stuck, drains RAM and force CPU to work nonstop." name="Restart Google Service"
-			action="generic_cortex /tmp/cron_ram_release" label="Restart LP Google Service in every 8 hours"/>
-
-		<checkbox description="Cron that updates AD-BLOCKER every week at SAT 6:00 AM, from official site. The cron will check if phone is connected to the internet, otherwise it will try to use WIFI! Script turns WIFI and DATA on, wait for connection and update and when it's finished, turns WIFI OFF. If there is no connection, an error will be written into the log. If you use other app for blocking adds, no need to use it." name="Update AD-Block"
-			action="generic_cortex /tmp/ad_block_update" label="Update AD-BLOCKER every week"/>
-
-		<checkbox description="Cron for DB Optimization every day at 3:00 AM only if CPU is in idle." name="DB Optimization"
-			action="generic_cortex /tmp/cron_db_optimizing" label="DB Optimization every day at 3:00 AM"/>
-
-		<checkbox description="Cron for clearing app cache every day at 4:00 AM only if CPU is in idle." name="Clear app cache"
-			action="generic_cortex /tmp/cron_clear_app_cache" label="Disk Clean task every day at 4:00 AM"/>
-
-		<button description="Check if CRON Task Jobs are done as requested. It will show the log for all finished jobs." name="Test Cron Task Jobs" action="push-actions/crontab_log" label="Test Cron Task Jobs"/>
+			<seekBar description="Scan Delay Interval (default 1000) lower we set, more ram we can gain, but in cost of performance impact and battery. best leave it 1000" name="UKSM Scan Delay Interval" action="generic /sys/kernel/mm/uksm/sleep_millisecs" unit="ms" min="50" reversed="false" step="50" max="1000"/>
 
 	</settingsPane>
 
@@ -1015,7 +973,7 @@
 
 	<settingsPane description="AC and USB charging control" name="AC and USB charging control">
 
-		<spinner description="This will force fast charging! (Disabled: Disabled | Use stock AC level on USB(Max 1000mA) | Use custom mA on AC and USB) (Default: Use stock AC level on USB(Max 1000mA)" name="Force Fast Charging" action="generic /sys/kernel/fast_charge/force_fast_charge">
+		<spinner description="This will force fast charging! (Disabled: Disabled | Use stock AC level on USB(Max 1000mA) | Use custom mA on AC and USB) (Default: Disabled)" name="Force Fast Charging" action="generic /sys/kernel/fast_charge/force_fast_charge">
 			<spinnerItem name="Disabled" value="0"/>
 			<spinnerItem name="Use stock AC level on USB(Max 1000mA)" value="1"/>
 			<spinnerItem name="Use custom mA on AC and USB" value="2"/>
@@ -1069,23 +1027,36 @@
 <settingsTab name="Other">
 
 	<settingsPane description="Set some settings and options for your apps." name="Apps">
+
+		<button description="Click here to start Zipaligning ONLY user apps. System may be unresponsive, it is OK, do not use phone for 2 minutes. WARNING! Backup all user applications before use! This process will remove applications that are BROKEN and not compressed or compiled correctly, so you may find some apps missing. USE it AT YOUR OWN RISK, and update the broken applications!." name="ZIPALIGN" action="push-actions/zipalign" label="ZIPALIGN ALL APPS"/>
+
 		<button description="Click here to start applications Database Optimization. Compacting, cleaning and indexing will take max 2min." name="DB OPTIMIZATION" action="push-actions/database_optimizing" label="DATABASE OPTIMIZATON"/>
 
-		<button description="Click here to see current SELINUX status! Enforcing or Permissive globally. default is Permissive, you can switch to Enforcing with button below." name="SELINUX STATUS CHECK" action="push-actions/selinux_check" label="SELINUX STATUS CHECK"/>
+		<button description="Click here to see current SELINUX status! ON or OFF globaly. default is OFF, you can turn it ON with button below." name="SELINUX STATUS CHECK" action="push-actions/selinux_check" label="SELINUX STATUS CHECK"/>
 
-		<button description="Touch here to set SELinux as Permissive or Enforcing. If SELinux is set as Permissive (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change SELinux to Enforcing! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX PERMISSIVE/ENFORCING CONTROL" action="push-actions/selinux_switch" label="SELINUX PERMISSIVE/ENFORCING"/>
-		
+		<button description="Touch here to Enable or Disable Selinux Driver. If selinux is OFF apps may get access to files in system but not changed them. With ROOT access they can (with or without selinux). If SELINUX is disabled (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change selinux to ENABLE! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX ON OFF CONTROL" action="push-actions/selinux_switch" label="SELINUX HARD ON OFF"/>
+
+		<spinner description="Allows you to change your SELinux (Security-Enhanced Linux) Status from Enforcing (policy is enforced) to Permissive (prints warnings instead of enforcing)." name="SeLinux Control" action="selinux_control">
+			<spinnerItem name="Enforcing" value="on"/> 
+			<spinnerItem name="Permissive" value="off"/> 
+		</spinner>
+
+		<spinner description="Google Play Services Battery Drain Workaround" name="Enable On Boot" action="generic_cortex /tmp/gpservicefix">
+			<spinnerItem name="Enabled" value="yes"/> 
+			<spinnerItem name="Disabled" value="no"/> 
+		</spinner>
+
+		<spinner description="Control to enable or disable logcat, logcat used to debug ROM services and apps, if you never used it, then keep it OFF, you get more battery and less CPU usage on idle." name="Logcat ON/OFF" action="logger">
+			<spinnerItem name="Logcat OFF" value="0"/> 
+			<spinnerItem name="Logcat ON" value="1"/> 
+		</spinner>
+
 	</settingsPane>
 
 	<settingsPane description="WIFI Settings" name="WIFI">
 
 		<button description="Clean WIFI DHCP IP Lease. Push the button to activate!" name="Clean WIFI Lease" action="push-actions/fix_wifi" label="Clean WIFI Lease"/>
 
-		<spinner description="Google Play Services Battery Drain Workaround. Reboot is needed!You will get a FC of Google Play Services on next reboot" name="GS Enable On Boot" action="generic_cortex /tmp/gpsfixer">
-			<spinnerItem name="Enabled" value="on"/> 
-			<spinnerItem name="Disabled" value="off"/> 
-		</spinner>
-		
 	</settingsPane>
 
 	<settingsPane description="Set GPS and NTP settings and options." name="GPS - NTP">
@@ -1125,7 +1096,7 @@
 
 		<seekBar description="Vibration force level. (Default: 75)" name="Vibration force" action="generic /sys/devices/virtual/timed_output/vibrator/pwm_value" unit="%" min="0" reversed="false" step="5" max="100"/>
 
-		<button description="Push Trim Now button in order to speed up Read and Write Access Time. It's good to use it once in a day or two, or let the cron to do it for you." name="Trim System, Data and Cache" action="push-actions/fstrim" label="Trim NOW"/>
+		<button description="Use this button to Trim System, Data and Cache Nand partitions to speed up Read and Write Access, good to use once in a day or two." name="Trim System, Data and Cache" action="push-actions/fstrim" label="Trim NOW"/>
 
 	</settingsPane>
 
@@ -1189,6 +1160,30 @@
 
 </settingsTab>
 
+<settingsTab name="PROFILES">
+
+	<settingsPane description="You can check which profile is used." name="Online Profile">
+
+		<button description="This displays your currently used profile." name="Profile Check" action="push-actions/profile" label="Profile Check"/>
+
+	</settingsPane>
+
+	<settingsPane description="Select profile. You can also switch the default profiles (battery, default, performance) via Kernel-Recovery." name="STweaks Profiles">
+
+		<button description="extreme_battery.profile" name="extreme_battery.profile" action="push-actions/config_backup_restore 6" label="EXTREME BATTERY"/>
+
+		<button description="battery.profile" name="battery.profile" action="push-actions/config_backup_restore 3" label="BATTERY"/>
+
+		<button description="default.profile" name="default.profile" action="push-actions/config_backup_restore 4" label="DEFAULT"/>
+
+		<button description="performance.profile" name="performance.profile" action="push-actions/config_backup_restore 5" label="PERFORMANCE"/>
+
+		<button description="extreme_performance.profile" name="extreme_performance.profile" action="push-actions/config_backup_restore 7" label="EXTREME PERFORMANCE"/>
+
+	</settingsPane>
+
+</settingsTab>
+
 <settingsTab name="BACKUP or RESTORE">
 
 	<settingsPane description="Backup or restore your profile after installing new kernel. When you restore your configuration, please wait till this app restarts with the new settings. Some settings will work only after reboot! Restore will take up to 30 sec, just wait here!" name="STweaks Settings Backup or Restore">
@@ -1201,18 +1196,5 @@
 
 </settingsTab>
 
-<settingsTab name="BUG REPORT">
-
-	<settingsPane description="Debug to SD-Card." name="Bug-Report">
-
-		<button description="Bug-Report for Kernel, if a reboot or a freeze was performed and log was created with it's name part contains USELESS phase, then there is nothing to be done here. There is no need to upload it to thread for investigation." name="Kernel Debug" action="push-actions/debug_to_sd 1" label="KERNEL-CRASH-DEBUG"/>
-
-		<button description="Active Kernel/System Debug Report, use to report BUG with kernel or system in LIVE, NOT after crash, reboot or freeze. if something is wrong, upload debug for investigation." name="Kernel Active Debug" action="push-actions/debug_to_sd 3" label="KERNEL-ACTIVE-DEBUG"/>
-
-		<button description="Bug-Report for apps. Make sure that Logcat is Enabled before using this option. Remember, it's useless for kernel DEV and it's only needed for ROM DEV!" name="App-Bug" action="push-actions/debug_to_sd 2" label="ROM-Logcat"/>
-
-	</settingsPane>
-
-</settingsTab>
 </settingsRoot>
 

@@ -1,6 +1,4 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 if [ "a$2" != "a" ]; then
 	usb_mode=$2;
@@ -25,4 +23,4 @@ if [ "a$2" != "a" ]; then
 	esac;
 fi;
 
-$BB echo "${usb_mode}";
+echo "${usb_mode}";

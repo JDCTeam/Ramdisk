@@ -1,6 +1,4 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 if [ "a$2" != "a" ]; then
 
@@ -17,7 +15,7 @@ if [ "a$2" != "a" ]; then
 		eval $evalcmd;
 
 		if [ -f $2 ]; then
-			$BB echo "$newfreq" > $2;
+			echo "$newfreq" > $2;
 		fi;
 	fi;
 fi;

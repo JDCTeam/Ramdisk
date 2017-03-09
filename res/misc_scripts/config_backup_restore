@@ -1,43 +1,41 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 if [ "a$2" == "a" ]; then
-	$BB echo "$config_backup_restore";
+	echo "$config_backup_restore";
 else
 	config_backup_restore=$2;
-	$BB echo "$config_backup_restore";
+	echo "$config_backup_restore";
 fi;
 
 case "${config_backup_restore}" in
 	3)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	4)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	5)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	6)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	7)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	*)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 esac;
 
 case "${config_backup_restore}" in
 	1)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	2)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 	*)
-		$BB echo "Wait! Restoring";
+		echo "Wait! Restoring";
 	;;
 esac;

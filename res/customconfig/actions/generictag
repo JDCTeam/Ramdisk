@@ -1,6 +1,4 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 if [ -f $3 ];then
 	FILEVAR=$2_$(basename $3)
@@ -8,15 +6,15 @@ if [ -f $3 ];then
 	if [ -z $4 ]; then
 		evalcmd='eval echo \$$FILEVAR'
 		if [ "a`eval $evalcmd`" == "a" ]; then
-			eval $FILEVAR=`$BB cat $3`
-			$BB echo $FILEVAR=`$BB cat $3` >> $DEFAULT_PROFILE
+			eval $FILEVAR=`cat $3`
+			echo $FILEVAR=`cat $3` >> $DEFAULT_PROFILE
 		fi
 	else
 		if [ "$CONTROLSWITCH_$2" == "on" -o "$CONFIG_BOOTED" == true ]; then
-			$BB echo $4 > $3
+			echo $4 > $3
 		fi
-		eval $FILEVAR=`$BB cat $3`
+		eval $FILEVAR=`cat $3`
 	fi
 
-	eval $BB echo \$$FILEVAR
+	eval echo \$$FILEVAR
 fi

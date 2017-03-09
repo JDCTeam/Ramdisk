@@ -1,12 +1,10 @@
-#!/sbin/bb/busybox sh
+#!/sbin/busybox sh
 
-BB=/sbin/bb/busybox
+/sbin/busybox fstrim -v /system > /data/.alucard/fstrim_log;
+/sbin/busybox fstrim -v /data >> /data/.alucard/fstrim_log;
+/sbin/busybox fstrim -v /cache >> /data/.alucad/fstrim_log;
 
-$BB fstrim -v /system > /data/.b--b/fstrim_log;
-$BB fstrim -v /data >> /data/.b--b/fstrim_log;
-$BB fstrim -v /cache >> /data/.alucad/fstrim_log;
+fstrim_log=$(cat /data/.alucard/fstrim_log);
 
-fstrim_log=$($BB cat /data/.b--b/fstrim_log);
-
-$BB echo "$fstrim_log"
+echo "$fstrim_log"
 

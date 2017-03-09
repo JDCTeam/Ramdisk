@@ -1,7 +1,5 @@
-#!/sbin/bb/busybox sh
+#!/sbin/busybox sh
 
-BB=/sbin/bb/busybox
+PROFILE=`cat /data/.alucard/.active.profile`;
 
-PROFILE=`$BB cat /data/.b--b/.active.profile`;
-
-$BB echo "your profile: \"$PROFILE\"";
+echo "your profile: \"$PROFILE\"";

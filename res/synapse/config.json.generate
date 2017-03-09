@@ -1,4 +1,4 @@
-BB=/sbin/bb/busybox;
+BB=/sbin/busybox;
 DEVICE=/res/synapse/files/sgs4.sh;
 
 bool() {
@@ -9,7 +9,7 @@ bool() {
 # Mount root as RW to apply tweaks and settings
 $BB mount -o remount,rw /;
 
-$BB cat << CTAG
+cat << CTAG
 {
     sections: [
 		`if [ -n "$DEVICE" ]; then

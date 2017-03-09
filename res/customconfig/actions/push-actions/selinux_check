@@ -1,13 +1,11 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 #created by Dorimanx.
 
-selinux_status=$(grep -c "androidboot.selinux=permissive" /proc/cmdline);
+selinux_status=$(grep -c "selinux=0" /proc/cmdline);
 
 if [ "$selinux_status" -eq "0" ]; then
-	$BB echo "SELinux set as Enforcing!";
+	echo "Kernel Selinux Enabled!";
 else
-	$BB echo "SELinux set as Permissive";
+	echo "Kernel Selinux Disabled";
 fi;

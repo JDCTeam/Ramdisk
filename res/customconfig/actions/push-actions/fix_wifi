@@ -1,10 +1,8 @@
-#!/sbin/bb/busybox sh
-
-BB=/sbin/bb/busybox
+#!/sbin/busybox sh
 
 (
 	svc wifi disable;
-	$BB rm -f /data/misc/dhcp/dhcpcd*;
+	rm -f /data/misc/dhcp/dhcpcd*;
 	svc wifi enable;
-	$BB echo "WIFI Release Renew is DONE"
+	echo "WIFI Release Renew is DONE"
 )&

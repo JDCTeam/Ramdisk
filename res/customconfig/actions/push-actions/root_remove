@@ -1,18 +1,18 @@
-#!/sbin/bb/busybox sh
+#!/sbin/busybox sh
 export PATH="/res/customconfig/actions/push-actions:${PATH}";
 
 (
-	BB=/sbin/bb/busybox
+	BB=/sbin/busybox
 
-	if [ -f /su/bin/su ]; then
+	if [ -f /system/xbin/su ]; then
 			$BB mount -o remount,rw /dev/block/mmcblk0p9 /system;
 			$BB mount -t rootfs -o remount,rw rootfs;
 			$BB rm -f /system/bin/su > /dev/null 2>&1;
-			$BB rm -f /su/bin/su > /dev/null 2>&1;
+			$BB rm -f /system/xbin/su > /dev/null 2>&1;
 			$BB rm -f /system/bin/.ext/su > /dev/null 2>&1;
 
 			if [ -e /data/app/*chainfire?supersu.pr*.apk ]; then
-				$BB mv /data/app/*chainfire?supersu.pr*.apk /data/system/chain_pro.apk_bkp;
+				mv /data/app/*chainfire?supersu.pr*.apk /data/system/chain_pro.apk_bkp;
 			fi;
 
 			# SuperUser, superuser Superuser SuperUser whatever...
@@ -37,13 +37,13 @@ export PATH="/res/customconfig/actions/push-actions:${PATH}";
 			$BB mount -o remount,ro /dev/block/mmcblk0p9 /system > /dev/null 2>&1;
 			$BB mount -t rootfs -o remount,ro rootfs > /dev/null 2>&1;
 	fi;
-	$BB pkill -f "com.noshufou.android.su";
-	$BB pkill -f "eu.chinfire.supersu";
+	pkill -f "com.noshufou.android.su";
+	pkill -f "eu.chinfire.supersu";
 )&
 
-$BB sleep 3;
-if [ ! -f /su/bin/su ]; then
-	$BB echo "ROOT REMOVED! STOCK SYSTEM!";
+sleep 3;
+if [ ! -f /system/xbin/su ]; then
+	echo "ROOT REMOVED! STOCK SYSTEM!";
 else
-	$BB echo "ROOT NOT REMOVED! Try again";
+	echo "ROOT NOT REMOVED! Try again";
 fi;
