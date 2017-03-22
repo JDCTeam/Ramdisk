@@ -204,6 +204,10 @@ fi;
 
 OPEN_RW;
 
+# get values from profile
+PROFILE=$(cat /data/.b--b/.active.profile);
+. /data/.b--b/"$PROFILE".profile;
+
 if [ "$stweaks_boot_control" == "yes" ]; then
 	# apply Synapse monitor
 	$BB sh /res/synapse/uci reset;
@@ -418,6 +422,10 @@ GOOGLE_SERVICE_BD_FIXER()
 		pm disable com.google.android.gsf/.update.SystemUpdateService
 	fi;
 }
+
+# get values from profile
+PROFILE=$(cat /data/.b--b/.active.profile);
+. /data/.b--b/"$PROFILE".profile;
 
 if [ "$stweaks_boot_control" == "yes" ]; then
 
