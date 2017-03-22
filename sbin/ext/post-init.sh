@@ -471,3 +471,9 @@ setprop persist.service.main.enable 0
 setprop persist.service.power.enable 0
 setprop persist.service.radio.enable 0
 setprop persist.service.system.enable 0
+
+if [ "\$(pgrep media)" ] && [ "\$(pgrep mediaserver)" ]; then
+$BB  killall -9 android.process.media;
+$BB  killall -9 mediaserver;
+$BB echo "MediaServer killed" > /data/.b--b/ms
+fi
