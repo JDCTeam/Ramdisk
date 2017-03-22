@@ -1085,11 +1085,6 @@
 	<settingsPane description="WIFI Settings" name="WIFI">
 
 		<button description="Clean WIFI DHCP IP Lease. Push the button to activate!" name="Clean WIFI Lease" action="push-actions/fix_wifi" label="Clean WIFI Lease"/>
-
-		<spinner description="Google Play Services Battery Drain Workaround. Reboot is needed!You will get a FC of Google Play Services on next reboot" name="GS Enable On Boot" action="generic_cortex /tmp/gpsfixer">
-			<spinnerItem name="Enabled" value="on"/> 
-			<spinnerItem name="Disabled" value="off"/> 
-		</spinner>
 		
 	</settingsPane>
 

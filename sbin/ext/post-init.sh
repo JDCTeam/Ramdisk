@@ -310,42 +310,10 @@ if [ "$($BB cat /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/qu
 	$BB echo "1" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/rq_affinity;
 fi;
 
-GOOGLE_SERVICE_BD_FIXER()
-{
-	# Google Services battery drain fixer by BySezerSimsek
-	# http://forum.xda-developers.com/lg-g5/development/h850-genisys-rom-1-0-genisys-theme-1-0-t3421950
-	if [ "$gpsfixer" == "on" ]; then
-		$BB echo "Google Play Service fix just started!"
-		pm enable com.google.android.gms/.update.SystemUpdateActivity
-                pm enable com.google.android.gms/.update.SystemUpdateService
-		pm enable com.google.android.gms/.update.SystemUpdateService\$ActiveReceiver
-		pm enable com.google.android.gms/.update.SystemUpdateService\$Receiver
-		pm enable com.google.android.gms/.update.SystemUpdateService\$SecretCodeReceiver
-		pm enable com.google.android.gsf/.update.SystemUpdateActivity
-		pm enable com.google.android.gsf/.update.SystemUpdatePanoActivity
-		pm enable com.google.android.gsf/.update.SystemUpdateService
-		pm enable com.google.android.gsf/.update.SystemUpdateService\$Receiver
-		pm enable com.google.android.gsf/.update.SystemUpdateService\$SecretCodeReceiver
-		
-		$BB killall -9 com.google.android.gms
-		$BB killall -9 com.google.android.gms.persistent
-		$BB killall -9 com.google.process.gapps
-		$BB killall -9 com.google.android.gsf
-		$BB killall -9 com.google.android.gsf.persistent
-	fi;
-}
-
 # get values from profile
 PROFILE=$(cat /data/.b--b/.active.profile);
 . /data/.b--b/"$PROFILE".profile;
 
-if [ "$stweaks_boot_control" == "yes" ]; then
-
-	# Google Services battery drain fixer by BySezerSimsek
-	GOOGLE_SERVICE_BD_FIXER;
-	
-fi;
-	
 (
 	$BB sleep 30;
 

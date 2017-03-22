@@ -177,7 +177,6 @@ ac_charge_level=1900
 usb_charge_level=460
 tcp_congestion_control=cubic
 logger=0
-gpsfixer=off
 gpsregion=No_GPS_Zone_changes
 init_d=off
 pwm_value=75
