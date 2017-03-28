@@ -7,8 +7,6 @@ BB=/sbin/bb/busybox
 # protect init from oom
 if [ -f /su/bin/su ]; then
 	su -c echo "-1000" > /proc/1/oom_score_adj;
-else
-	su -c echo "-1000" > /proc/1/oom_score_adj;
 fi;
 
 # clean dalvik after selinux change.
@@ -131,9 +129,9 @@ fi;
 # reset profiles auto trigger to be used by kernel ADMIN, in case of need, if new value added in default profiles
 # just set numer $RESET_MAGIC + 1 and profiles will be reset one time on next boot with new kernel.
 # incase that ADMIN feel that something wrong with global STweaks config and profiles, then ADMIN can add +1 to CLEAN_ALU_DIR
-# to clean all files on first boot from /data/.alucard/ folder.
-RESET_MAGIC=7;
-CLEAN_ALU_DIR=2;
+# to clean all files on first boot from /data/.b--b/ folder.
+RESET_MAGIC=1;
+CLEAN_ALU_DIR=1;
 
 if [ ! -e /data/.b--b/reset_profiles ]; then
 	$BB echo "$RESET_MAGIC" > /data/.b--b/reset_profiles;
@@ -203,10 +201,6 @@ if [ "$($BB pgrep -f "cortexbrain-tune.sh" | $BB wc -l)" -eq "0" ]; then
 fi;
 
 OPEN_RW;
-
-# get values from profile
-PROFILE=$(cat /data/.b--b/.active.profile);
-. /data/.b--b/"$PROFILE".profile;
 
 if [ "$stweaks_boot_control" == "yes" ]; then
 	# apply Synapse monitor
@@ -310,10 +304,6 @@ if [ "$($BB cat /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/qu
 	$BB echo "1" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/rq_affinity;
 fi;
 
-# get values from profile
-PROFILE=$(cat /data/.b--b/.active.profile);
-. /data/.b--b/"$PROFILE".profile;
-
 (
 	$BB sleep 30;
 
@@ -341,7 +331,6 @@ PROFILE=$(cat /data/.b--b/.active.profile);
 	# stop core control if need to
 	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
 
-	
 	# script finish here, so let me know when
 	TIME_NOW=$(date)
 	$BB echo "$TIME_NOW" > /data/boot_log_dm

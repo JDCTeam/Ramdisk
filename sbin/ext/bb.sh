@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-if [ "$(mount | grep rootfs | cut -c 17-18 | grep -c ro)" -eq "1" ]; then
+if [ "$(mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	mount -o rw,remount -t rootfs /;
 fi;
 
