@@ -30,6 +30,7 @@ OPEN_RW()
 }
 OPEN_RW;
 
+
 selinux_status=$($BB grep -c "enforcing=1" /proc/cmdline);
 if [ "$selinux_status" -eq "1" ]; then
 	$BB umount /firmware;
@@ -202,6 +203,10 @@ fi;
 
 OPEN_RW;
 
+# get values from profile
+PROFILE=$(cat /data/.b--b/.active.profile);
+. /data/.b--b/"$PROFILE".profile;
+
 if [ "$stweaks_boot_control" == "yes" ]; then
 	# apply Synapse monitor
 	$BB sh /res/synapse/uci reset;
@@ -273,8 +278,12 @@ OPEN_RW;
 # Fix critical perms again after init.d mess
 CRITICAL_PERM_FIX;
 
+# get values from profile
+PROFILE=$(cat /data/.b--b/.active.profile);
+. /data/.b--b/"$PROFILE".profile;
+
 if [ "$stweaks_boot_control" == "yes" ]; then
-	$BB sh /sbin/ext/cortexbrain-tune.sh apply_cpu update > /dev/null;
+	
 	# Load Custom Modules
 	MODULES_LOAD;
 fi;
@@ -331,6 +340,9 @@ fi;
 	# stop core control if need to
 	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
 
+	if [ "$stweaks_boot_control" == "yes" ]; then
+		$BB sh /sbin/ext/cortexbrain-tune.sh apply_cpu update > /dev/null;
+	fi;
 	# script finish here, so let me know when
 	TIME_NOW=$(date)
 	$BB echo "$TIME_NOW" > /data/boot_log_dm
