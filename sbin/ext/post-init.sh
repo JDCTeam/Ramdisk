@@ -131,7 +131,7 @@ fi;
 # just set numer $RESET_MAGIC + 1 and profiles will be reset one time on next boot with new kernel.
 # incase that ADMIN feel that something wrong with global STweaks config and profiles, then ADMIN can add +1 to CLEAN_ALU_DIR
 # to clean all files on first boot from /data/.b--b/ folder.
-RESET_MAGIC=2;
+RESET_MAGIC=1;
 CLEAN_ALU_DIR=1;
 
 if [ ! -e /data/.b--b/reset_profiles ]; then
