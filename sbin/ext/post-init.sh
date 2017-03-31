@@ -429,17 +429,6 @@ fi;
 	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
 
 	if [ "$stweaks_boot_control" == "yes" ]; then
-		# Disable logcat by BySezerSimsek
-		# http://forum.xda-developers.com/lg-g5/development/h850-genisys-rom-1-0-genisys-theme-1-0-t3421950
-		if [ "$disablelogcat" == "on" ]; then
-			setprop logcat.live disable
-			$BB rm -f /dev/log/main
-			setprop debugtool.anrhistory 0
-			setprop profiler.debugmonitor false
-			setprop profiler.launch false
-			setprop profiler.hung.dumpdobugreport false
-			setprop persist.android.strictmode 0
-		fi;
 		$BB sh /sbin/ext/cortexbrain-tune.sh apply_cpu update > /dev/null;
 	fi;
 	# script finish here, so let me know when
