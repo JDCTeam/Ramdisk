@@ -246,41 +246,41 @@
 
 <settingsTab name="CPU-VOLTAGE">
 
-	<settingsPane description="CPU Voltage Control. Voltage range is 800.000~1300.000 µV. Lower or higher are NOT SUPPORTED. All is done to prevent BUGS and SODS. Use this interface AT YOUR OWN RISK! If you get SOD before you can load this interface and cannot fix your error, flash another kernel or my cleaning script to reset profiles from recovery!" name="CPU Voltage Controls">
+	<settingsPane description="CPU Voltage Control. Voltage range is 800.000~1300.000 Î¼V. Lower or higher are NOT SUPPORTED. All is done to prevent BUGS and SODS. Use this interface AT YOUR OWN RISK! If you get SOD before you can load this interface and cannot fix your error, flash another kernel or my cleaning script to reset profiles from recovery!" name="CPU Voltage Controls">
 
 		<checkbox description="Main switch for Voltage Control. If disabled, all below settings have no effect! If you are using an external application or script to configure CPU voltage, do not tick this checkbox. Do not start to mod voltage before you enable this switch! It will not have any effect and you will have to set all to default, and tune again!" name="CPU Voltage Main Switch" action="generic_cortex /tmp/cpu_voltage_switch" label="CPU Voltage Main Switch"/>
 
 		<button description="Use this button to see what CPU Voltage is used right now!" name="Check Active CPU Voltage" action="push-actions/check_cpu_voltage" label="Check CPU Voltage"/>
 
-		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 1890.000 kHz" action="cpu-voltage 1" unit="µV" min="1062500" reversed="false" step="12500" max="1300000"/>
+		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 1890.000 kHz" action="cpu-voltage 1" unit="Î¼V" min="1062500" reversed="false" step="12500" max="1300000"/>
 
-		<seekBar description="CPU Voltage for 1782.000 kHz." name="CPU Voltage 1782.000 kHz" action="cpu-voltage 2" unit="µV" min="1012500" reversed="false" step="12500" max="1225000"/>
+		<seekBar description="CPU Voltage for 1782.000 kHz." name="CPU Voltage 1782.000 kHz" action="cpu-voltage 2" unit="Î¼V" min="1012500" reversed="false" step="12500" max="1225000"/>
 
-		<seekBar description="CPU Voltage for 1674.000 kHz." name="CPU Voltage 1674.000 kHz" action="cpu-voltage 3" unit="µV" min="962500" reversed="false" step="12500" max="1175000"/>
+		<seekBar description="CPU Voltage for 1674.000 kHz." name="CPU Voltage 1674.000 kHz" action="cpu-voltage 3" unit="Î¼V" min="962500" reversed="false" step="12500" max="1175000"/>
 
-		<seekBar description="CPU Voltage for 1566.000 kHz." name="CPU Voltage 1566.000 kHz" action="cpu-voltage 4" unit="µV" min="925000" reversed="false" step="12500" max="1125000"/>
+		<seekBar description="CPU Voltage for 1566.000 kHz." name="CPU Voltage 1566.000 kHz" action="cpu-voltage 4" unit="Î¼V" min="925000" reversed="false" step="12500" max="1125000"/>
 
-		<seekBar description="CPU Voltage for 1458.000 kHz." name="CPU Voltage 1458.000 kHz" action="cpu-voltage 5" unit="µV" min="900000" reversed="false" step="12500" max="1100000"/>
+		<seekBar description="CPU Voltage for 1458.000 kHz." name="CPU Voltage 1458.000 kHz" action="cpu-voltage 5" unit="Î¼V" min="900000" reversed="false" step="12500" max="1100000"/>
 
-		<seekBar description="CPU Voltage for 1350.000 kHz." name="CPU Voltage 1350.000 kHz" action="cpu-voltage 6" unit="µV" min="862500" reversed="false" step="12500" max="1062500"/>
+		<seekBar description="CPU Voltage for 1350.000 kHz." name="CPU Voltage 1350.000 kHz" action="cpu-voltage 6" unit="Î¼V" min="862500" reversed="false" step="12500" max="1062500"/>
 
-		<seekBar description="CPU Voltage for 1242.000 kHz." name="CPU Voltage 1242.000 kHz" action="cpu-voltage 7" unit="µV" min="837500" reversed="false" step="12500" max="1037500"/>
+		<seekBar description="CPU Voltage for 1242.000 kHz." name="CPU Voltage 1242.000 kHz" action="cpu-voltage 7" unit="Î¼V" min="837500" reversed="false" step="12500" max="1037500"/>
 
-		<seekBar description="CPU Voltage for 1134.000 kHz." name="CPU Voltage 1134.000 kHz" action="cpu-voltage 8" unit="µV" min="825000" reversed="false" step="12500" max="1025000"/>
+		<seekBar description="CPU Voltage for 1134.000 kHz." name="CPU Voltage 1134.000 kHz" action="cpu-voltage 8" unit="Î¼V" min="825000" reversed="false" step="12500" max="1025000"/>
 
-		<seekBar description="CPU Voltage for 1026.000 kHz." name="CPU Voltage 1026.000 kHz" action="cpu-voltage 9" unit="µV" min="800000" reversed="false" step="12500" max="1000000"/>
+		<seekBar description="CPU Voltage for 1026.000 kHz." name="CPU Voltage 1026.000 kHz" action="cpu-voltage 9" unit="Î¼V" min="800000" reversed="false" step="12500" max="1000000"/>
 
-		<seekBar description="CPU Voltage for 918.000 kHz." name="CPU Voltage 918.000 kHz" action="cpu-voltage 10" unit="µV" min="775000" reversed="false" step="12500" max="975000"/>
+		<seekBar description="CPU Voltage for 918.000 kHz." name="CPU Voltage 918.000 kHz" action="cpu-voltage 10" unit="Î¼V" min="775000" reversed="false" step="12500" max="975000"/>
 
-		<seekBar description="CPU Voltage for 810.000 kHz." name="CPU Voltage 810.000 kHz" action="cpu-voltage 11" unit="µV" min="762500" reversed="false" step="12500" max="962500"/>
+		<seekBar description="CPU Voltage for 810.000 kHz." name="CPU Voltage 810.000 kHz" action="cpu-voltage 11" unit="Î¼V" min="762500" reversed="false" step="12500" max="962500"/>
 
-		<seekBar description="CPU Voltage for 702.000 kHz." name="CPU Voltage 702.000 kHz" action="cpu-voltage 12" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 702.000 kHz." name="CPU Voltage 702.000 kHz" action="cpu-voltage 12" unit="Î¼V" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 594.000 kHz." name="CPU Voltage 594.000 kHz" action="cpu-voltage 13" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 594.000 kHz." name="CPU Voltage 594.000 kHz" action="cpu-voltage 13" unit="Î¼V" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 486.000 kHz." name="CPU Voltage 486.000 kHz" action="cpu-voltage 14" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 486.000 kHz." name="CPU Voltage 486.000 kHz" action="cpu-voltage 14" unit="Î¼V" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 384.000 kHz." name="CPU Voltage 384.000 kHz" action="cpu-voltage 15" unit="µV" min="750000" reversed="false" step="12500" max="925000"/>
+		<seekBar description="CPU Voltage for 384.000 kHz." name="CPU Voltage 384.000 kHz" action="cpu-voltage 15" unit="Î¼V" min="750000" reversed="false" step="12500" max="925000"/>
 
 	</settingsPane>
 
@@ -336,7 +336,7 @@
 
 		<seekBar description="This threshold is used as up threshold while sampling at frequencies less than freq_for_responsiveness. Above that, normal up_threshold is used. This gives the option to make scaling aggressive or relaxed until a frequency and normal for higher frequencies. Again, during calculation of optimal frequency which should not trigger up policy, down threshold to consider is difference between up_threshold_at_min_freq and down_differential. (Only for HYPER, Ondemand and PegasusQ) (Default: 60%)" name="up_threshold_at_min_freq" action="generic_cortex /tmp/up_threshold_at_min_freq" unit="%" min="1" reversed="false" step="1" max="100"/>
 
-		<seekBar description="Sampling Interval, measured in µs. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 20.000 µs)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="µs" min="10000" reversed="false" step="5000" max="200000"/>
+		<seekBar description="Sampling Interval, measured in Î¼s. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 20.000 Î¼s)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="Î¼s" min="10000" reversed="false" step="5000" max="200000"/>
 
 		<seekBar description="Acts as a multiplier for sampling interval for re-evaluating the load when CPU is truly busy and is on highest clock frequency (policy max). Setting to 1 makes no difference and causes CPU to immediately scale down from highest frequency. Sampling down factor is NOT valid for lower frequencies and low load conditions. Note that CPU is scaled up to max frequency when max_load_freq is greater than up_threshold X current frequency. (or to cur_freq + (freq_step X policy.max_freq) whichever is smaller) Max_load_freq is an arbitrary frequency calculated as the maximum of load_frequencies. (Only for HYPER, Ondemand, PegasusQ, Conservartive) (Default: 1)" name="sampling_down_factor" action="generic_cortex /tmp/sampling_down_factor" unit="int" min="1" reversed="false" step="1" max="10"/>
 
@@ -722,11 +722,11 @@
       <checkbox description="Main switch for Voltage Control. If disabled, all below settings have no effect! If you are using an external application or script to configure GPU voltage, do not tick this checkbox. Do not start to mod voltage before you enable this switch! It will not have any effect and you will have to set all to default, and tune again!" name="GPU Voltage Main Switch" action="generic_cortex /tmp/gpu_voltage_switch" label="GPU Voltage Main Switch"/>
 
       <seekBar description="GPU Voltage for the first (lowest) step" 
-		name="GPU Voltage Level1. (Default: 945000)" action="gpu-voltage 1" unit="µV" min="845000" reversed="false" step="25000" max="1050000"/>
+		name="GPU Voltage Level1. (Default: 945000)" action="gpu-voltage 1" unit="Î¼V" min="845000" reversed="false" step="25000" max="1050000"/>
       <seekBar description="GPU Voltage for the second (mid) step" 
-		name="GPU Voltage Level2. (Default: 1050000)" action="gpu-voltage 2" unit="µV" min="950000" reversed="false" step="25000" max="1200000"/>
+		name="GPU Voltage Level2. (Default: 1050000)" action="gpu-voltage 2" unit="Î¼V" min="950000" reversed="false" step="25000" max="1200000"/>
       <seekBar description="GPU Voltage for the third (highest) step" 
-		name="GPU Voltage Level3. (Default: 1150000)" action="gpu-voltage 3" unit="µV" min="1050000" reversed="false" step="25000" max="1200000"/>
+		name="GPU Voltage Level3. (Default: 1150000)" action="gpu-voltage 3" unit="Î¼V" min="1050000" reversed="false" step="25000" max="1200000"/>
 
     </settingsPane>
 
