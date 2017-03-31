@@ -277,6 +277,115 @@ OPEN_RW;
 
 # Fix critical perms again after init.d mess
 CRITICAL_PERM_FIX;
+GOOGLE_SERVICE_BD_FIXER()
+{
+	if [ "$gpsfixer" == "on" ]; then
+		pm disable com.google.android.gms/.ads.settings.AdsSettingsActivity
+		pm disable com.google.android.gms/com.google.android.location.places.ui.aliaseditor.AliasEditorActivity
+		pm disable com.google.android.gms/com.google.android.location.places.ui.aliaseditor.AliasEditorMapActivity
+		pm disable com.google.android.gms/com.google.android.location.settings.ActivityRecognitionPermissionActivity
+		pm disable com.google.android.gms/com.google.android.location.settings.GoogleLocationSettingsActivity
+		pm disable com.google.android.gms/com.google.android.location.settings.LocationHistorySettingsActivity
+		pm disable com.google.android.gms/com.google.android.location.settings.LocationSettingsCheckerActivity
+		pm disable com.google.android.gms/.usagereporting.settings.UsageReportingActivity
+		pm disable com.google.android.gms/.ads.adinfo.AdvertisingInfoContentProvider
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.ReportingContentProvider
+		pm disable com.google.android.gms/com.google.android.location.internal.LocationContentProvider
+		pm enable com.google.android.gms/.common.stats.net.contentprovider.NetworkUsageContentProvider
+		pm disable com.google.android.gms/com.google.android.gms.ads.config.GServicesChangedReceiver
+		pm disable com.google.android.gms/com.google.android.contextmanager.systemstate.SystemStateReceiver
+		pm disable com.google.android.gms/.ads.jams.SystemEventReceiver
+		pm disable com.google.android.gms/.ads.config.FlagsReceiver
+		pm disable com.google.android.gms/.ads.social.DoritosReceiver
+		pm disable com.google.android.gms/.analytics.AnalyticsReceiver
+		pm disable com.google.android.gms/.analytics.internal.GServicesChangedReceiver
+		pm disable com.google.android.gms/.common.analytics.CoreAnalyticsReceiver
+		pm enable com.google.android.gms/.common.stats.GmsCoreStatsServiceLauncher
+		pm disable com.google.android.gms/com.google.android.location.internal.AnalyticsSamplerReceiver
+		pm disable com.google.android.gms/.checkin.CheckinService$ActiveReceiver
+		pm disable com.google.android.gms/.checkin.CheckinService$ClockworkFallbackReceiver
+		pm disable com.google.android.gms/.checkin.CheckinService$ImposeReceiver
+		pm disable com.google.android.gms/.checkin.CheckinService$SecretCodeReceiver
+		pm disable com.google.android.gms/.checkin.CheckinService$TriggerReceiver
+		pm disable com.google.android.gms/.checkin.EventLogService$Receiver
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.ExternalChangeReceiver
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.GcmRegistrationReceiver
+		pm disable com.google.android.gms/com.google.android.location.copresence.GcmRegistrationReceiver
+		pm disable com.google.android.gms/com.google.android.location.copresence.GservicesBroadcastReceiver
+		pm disable com.google.android.gms/com.google.android.location.internal.LocationProviderEnabler
+		pm disable com.google.android.gms/com.google.android.location.internal.NlpNetworkProviderSettingsUpdateReceiver
+		pm disable com.google.android.gms/com.google.android.location.network.ConfirmAlertActivity$LocationModeChangingReceiver
+		pm disable com.google.android.gms/com.google.android.location.places.ImplicitSignalsReceiver
+		pm disable com.google.android.gms/com.google.android.libraries.social.mediamonitor.MediaMonitor
+		pm disable com.google.android.gms/.location.copresence.GcmBroadcastReceiver
+		pm disable com.google.android.gms/.location.reporting.service.GcmBroadcastReceiver
+		pm disable com.google.android.gms/.social.location.GservicesBroadcastReceiver
+		pm disable com.google.android.gms/.update.SystemUpdateService$Receiver
+		pm disable com.google.android.gms/.update.SystemUpdateService$OtaPolicyReceiver
+		pm disable com.google.android.gms/.update.SystemUpdateService$SecretCodeReceiver
+		pm disable com.google.android.gms/.update.SystemUpdateService$ActiveReceiver
+		pm disable com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService
+		pm enable com.google.android.gms/.ads.AdRequestBrokerService
+		pm disable com.google.android.gms/.ads.GservicesValueBrokerService
+		pm disable com.google.android.gms/.ads.identifier.service.AdvertisingIdNotificationService
+		pm enable com.google.android.gms/.ads.identifier.service.AdvertisingIdService
+		pm disable com.google.android.gms/.ads.jams.NegotiationService
+		pm disable com.google.android.gms/.ads.pan.PanService
+		pm disable com.google.android.gms/.ads.social.GcmSchedulerWakeupService
+		pm disable com.google.android.gms/.analytics.AnalyticsService
+		pm disable com.google.android.gms/.analytics.internal.PlayLogReportingService
+		pm disable com.google.android.gms/.analytics.service.AnalyticsService
+		pm disable com.google.android.gms/.analytics.service.PlayLogMonitorIntervalService
+		pm disable com.google.android.gms/.analytics.service.RefreshEnabledStateService
+		pm disable com.google.android.gms/.auth.be.proximity.authorization.userpresence.UserPresenceService
+		pm disable com.google.android.gms/.common.analytics.CoreAnalyticsIntentService
+		pm enable com.google.android.gms/.common.stats.GmsCoreStatsService
+		pm disable com.google.android.gms/.backup.BackupStatsService
+		pm disable com.google.android.gms/.deviceconnection.service.DeviceConnectionAsyncService
+		pm disable com.google.android.gms/.deviceconnection.service.DeviceConnectionServiceBroker
+		pm disable com.google.android.gms/.wallet.service.analytics.AnalyticsIntentService
+		pm enable com.google.android.gms/.checkin.CheckinService
+		pm enable com.google.android.gms/.checkin.EventLogService
+		pm disable com.google.android.gms/com.google.android.location.internal.AnalyticsUploadIntentService
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.DeleteHistoryService
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.DispatchingService
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.InternalPreferenceServiceDoNotUse
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.LocationHistoryInjectorService
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.ReportingAndroidService
+		pm disable com.google.android.gms/com.google.android.location.reporting.service.ReportingSyncService
+		pm disable com.google.android.gms/com.google.android.location.activity.HardwareArProviderService
+		pm disable com.google.android.gms/com.google.android.location.fused.FusedLocationService
+		pm disable com.google.android.gms/com.google.android.location.fused.service.FusedProviderService
+		pm disable com.google.android.gms/com.google.android.location.geocode.GeocodeService
+		pm disable com.google.android.gms/com.google.android.location.geofencer.service.GeofenceProviderService
+		pm enable com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService
+		pm disable com.google.android.gms/com.google.android.location.places.PlaylogService
+		pm enable com.google.android.gms/com.google.android.location.places.service.GeoDataService
+		pm enable com.google.android.gms/com.google.android.location.places.service.PlaceDetectionService
+		pm disable com.google.android.gms/com.google.android.libraries.social.mediamonitor.MediaMonitorIntentService
+		pm disable com.google.android.gms/.config.ConfigService
+		pm enable com.google.android.gms/.stats.PlatformStatsCollectorService
+		pm enable com.google.android.gms/.usagereporting.service.UsageReportingService
+		pm enable com.google.android.gms/.update.SystemUpdateService
+		pm enable com.google.android.gms/com.google.android.location.network.ConfirmAlertActivity
+		pm enable com.google.android.gms/com.google.android.location.network.LocationProviderChangeReceiver
+		pm enable com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService
+		pm enable com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService
+		pm enable com.google.android.gms/com.google.android.location.network.NetworkLocationService
+		pm enable com.google.android.gms/com.google.android.location.util.PreferenceService
+		pm disable com.google.android.gsf/.update.SystemUpdateActivity
+		pm disable com.google.android.gsf/.update.SystemUpdatePanoActivity
+		pm disable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$Receiver
+		pm disable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$SecretCodeReceiver
+		pm disable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$TriggerReceiver
+		pm disable com.google.android.gsf/.checkin.EventLogService$Receiver
+		pm disable com.google.android.gsf/.update.SystemUpdateService$Receiver
+		pm disable com.google.android.gsf/.update.SystemUpdateService$SecretCodeReceiver
+		pm disable com.google.android.gsf/.checkin.CheckinService
+		pm disable com.google.android.gsf/.checkin.EventLogService
+		pm disable com.google.android.gsf/.update.SystemUpdateService
+	fi;
+}
 
 # get values from profile
 PROFILE=$(cat /data/.b--b/.active.profile);
@@ -286,32 +395,11 @@ if [ "$stweaks_boot_control" == "yes" ]; then
 	
 	# Load Custom Modules
 	MODULES_LOAD;
+	GOOGLE_SERVICE_BD_FIXER;
 fi;
 
-$BB echo "0" > /cputemp/freq_limit_debug;
+#$BB echo "0" > /cputemp/freq_limit_debug;
 
-# tune I/O controls to boost I/O performance
-
-#This enables the user to disable the lookup logic involved with IO
-#merging requests in the block layer. By default (0) all merges are
-#enabled. When set to 1 only simple one-hit merges will be tried. When
-#set to 2 no merge algorithms will be tried (including one-hit or more
-#complex tree/hash lookups).
-if [ "$($BB cat /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/nomerges)" != "2" ]; then
-	$BB echo "2" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/nomerges;
-	$BB echo "2" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/nomerges;
-fi;
-
-#If this option is '1', the block layer will migrate request completions to the
-#cpu "group" that originally submitted the request. For some workloads this
-#provides a significant reduction in CPU cycles due to caching effects.
-#For storage configurations that need to maximize distribution of completion
-#processing setting this option to '2' forces the completion to run on the
-#requesting cpu (bypassing the "group" aggregation logic).
-if [ "$($BB cat /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/rq_affinity)" != "1" ]; then
-	$BB echo "1" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/rq_affinity;
-	$BB echo "1" > /sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/rq_affinity;
-fi;
 
 (
 	$BB sleep 30;
@@ -341,6 +429,17 @@ fi;
 	$BB echo "$core_control" > /sys/module/msm_thermal/core_control/core_control;
 
 	if [ "$stweaks_boot_control" == "yes" ]; then
+		# Disable logcat by BySezerSimsek
+		# http://forum.xda-developers.com/lg-g5/development/h850-genisys-rom-1-0-genisys-theme-1-0-t3421950
+		if [ "$disablelogcat" == "on" ]; then
+			setprop logcat.live disable
+			$BB rm -f /dev/log/main
+			setprop debugtool.anrhistory 0
+			setprop profiler.debugmonitor false
+			setprop profiler.launch false
+			setprop profiler.hung.dumpdobugreport false
+			setprop persist.android.strictmode 0
+		fi;
 		$BB sh /sbin/ext/cortexbrain-tune.sh apply_cpu update > /dev/null;
 	fi;
 	# script finish here, so let me know when

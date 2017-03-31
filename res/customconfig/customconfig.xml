@@ -168,7 +168,7 @@
 
 		<checkbox description="Enable or disable Power-efficient work queues will help to reduce power consumption at the cost of slight performance overhead. By enabling this, PE work queues are used for unbound scheduled work to save load on sibling CPU cores and queuing work on CPU 0." name="Power-efficient work queues"  action="generic01 /sys/module/workqueue/parameters/power_efficient" label="Power-efficient work queues"/>
 
-		<spinner description="Maximum CPUs speed while using GPS. (Default: 1242.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
+		<spinner description="Maximum CPUs speed while using GPS. (Default: 1890.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -246,41 +246,41 @@
 
 <settingsTab name="CPU-VOLTAGE">
 
-	<settingsPane description="CPU Voltage Control. Voltage range is 800.000~1300.000 ÂµV. Lower or higher are NOT SUPPORTED. All is done to prevent BUGS and SODS. Use this interface AT YOUR OWN RISK! If you get SOD before you can load this interface and cannot fix your error, flash another kernel or my cleaning script to reset profiles from recovery!" name="CPU Voltage Controls">
+	<settingsPane description="CPU Voltage Control. Voltage range is 800.000~1300.000 µV. Lower or higher are NOT SUPPORTED. All is done to prevent BUGS and SODS. Use this interface AT YOUR OWN RISK! If you get SOD before you can load this interface and cannot fix your error, flash another kernel or my cleaning script to reset profiles from recovery!" name="CPU Voltage Controls">
 
 		<checkbox description="Main switch for Voltage Control. If disabled, all below settings have no effect! If you are using an external application or script to configure CPU voltage, do not tick this checkbox. Do not start to mod voltage before you enable this switch! It will not have any effect and you will have to set all to default, and tune again!" name="CPU Voltage Main Switch" action="generic_cortex /tmp/cpu_voltage_switch" label="CPU Voltage Main Switch"/>
 
 		<button description="Use this button to see what CPU Voltage is used right now!" name="Check Active CPU Voltage" action="push-actions/check_cpu_voltage" label="Check CPU Voltage"/>
 
-		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 1890.000 kHz" action="cpu-voltage 1" unit="ÂµV" min="1062500" reversed="false" step="12500" max="1300000"/>
+		<seekBar description="CPU Voltage for 1890.000 kHz." name="CPU Voltage 1890.000 kHz" action="cpu-voltage 1" unit="µV" min="1062500" reversed="false" step="12500" max="1300000"/>
 
-		<seekBar description="CPU Voltage for 1782.000 kHz." name="CPU Voltage 1782.000 kHz" action="cpu-voltage 2" unit="ÂµV" min="1012500" reversed="false" step="12500" max="1225000"/>
+		<seekBar description="CPU Voltage for 1782.000 kHz." name="CPU Voltage 1782.000 kHz" action="cpu-voltage 2" unit="µV" min="1012500" reversed="false" step="12500" max="1225000"/>
 
-		<seekBar description="CPU Voltage for 1674.000 kHz." name="CPU Voltage 1674.000 kHz" action="cpu-voltage 3" unit="ÂµV" min="962500" reversed="false" step="12500" max="1175000"/>
+		<seekBar description="CPU Voltage for 1674.000 kHz." name="CPU Voltage 1674.000 kHz" action="cpu-voltage 3" unit="µV" min="962500" reversed="false" step="12500" max="1175000"/>
 
-		<seekBar description="CPU Voltage for 1566.000 kHz." name="CPU Voltage 1566.000 kHz" action="cpu-voltage 4" unit="ÂµV" min="925000" reversed="false" step="12500" max="1125000"/>
+		<seekBar description="CPU Voltage for 1566.000 kHz." name="CPU Voltage 1566.000 kHz" action="cpu-voltage 4" unit="µV" min="925000" reversed="false" step="12500" max="1125000"/>
 
-		<seekBar description="CPU Voltage for 1458.000 kHz." name="CPU Voltage 1458.000 kHz" action="cpu-voltage 5" unit="ÂµV" min="900000" reversed="false" step="12500" max="1100000"/>
+		<seekBar description="CPU Voltage for 1458.000 kHz." name="CPU Voltage 1458.000 kHz" action="cpu-voltage 5" unit="µV" min="900000" reversed="false" step="12500" max="1100000"/>
 
-		<seekBar description="CPU Voltage for 1350.000 kHz." name="CPU Voltage 1350.000 kHz" action="cpu-voltage 6" unit="ÂµV" min="862500" reversed="false" step="12500" max="1062500"/>
+		<seekBar description="CPU Voltage for 1350.000 kHz." name="CPU Voltage 1350.000 kHz" action="cpu-voltage 6" unit="µV" min="862500" reversed="false" step="12500" max="1062500"/>
 
-		<seekBar description="CPU Voltage for 1242.000 kHz." name="CPU Voltage 1242.000 kHz" action="cpu-voltage 7" unit="ÂµV" min="837500" reversed="false" step="12500" max="1037500"/>
+		<seekBar description="CPU Voltage for 1242.000 kHz." name="CPU Voltage 1242.000 kHz" action="cpu-voltage 7" unit="µV" min="837500" reversed="false" step="12500" max="1037500"/>
 
-		<seekBar description="CPU Voltage for 1134.000 kHz." name="CPU Voltage 1134.000 kHz" action="cpu-voltage 8" unit="ÂµV" min="825000" reversed="false" step="12500" max="1025000"/>
+		<seekBar description="CPU Voltage for 1134.000 kHz." name="CPU Voltage 1134.000 kHz" action="cpu-voltage 8" unit="µV" min="825000" reversed="false" step="12500" max="1025000"/>
 
-		<seekBar description="CPU Voltage for 1026.000 kHz." name="CPU Voltage 1026.000 kHz" action="cpu-voltage 9" unit="ÂµV" min="800000" reversed="false" step="12500" max="1000000"/>
+		<seekBar description="CPU Voltage for 1026.000 kHz." name="CPU Voltage 1026.000 kHz" action="cpu-voltage 9" unit="µV" min="800000" reversed="false" step="12500" max="1000000"/>
 
-		<seekBar description="CPU Voltage for 918.000 kHz." name="CPU Voltage 918.000 kHz" action="cpu-voltage 10" unit="ÂµV" min="775000" reversed="false" step="12500" max="975000"/>
+		<seekBar description="CPU Voltage for 918.000 kHz." name="CPU Voltage 918.000 kHz" action="cpu-voltage 10" unit="µV" min="775000" reversed="false" step="12500" max="975000"/>
 
-		<seekBar description="CPU Voltage for 810.000 kHz." name="CPU Voltage 810.000 kHz" action="cpu-voltage 11" unit="ÂµV" min="762500" reversed="false" step="12500" max="962500"/>
+		<seekBar description="CPU Voltage for 810.000 kHz." name="CPU Voltage 810.000 kHz" action="cpu-voltage 11" unit="µV" min="762500" reversed="false" step="12500" max="962500"/>
 
-		<seekBar description="CPU Voltage for 702.000 kHz." name="CPU Voltage 702.000 kHz" action="cpu-voltage 12" unit="ÂµV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 702.000 kHz." name="CPU Voltage 702.000 kHz" action="cpu-voltage 12" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 594.000 kHz." name="CPU Voltage 594.000 kHz" action="cpu-voltage 13" unit="ÂµV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 594.000 kHz." name="CPU Voltage 594.000 kHz" action="cpu-voltage 13" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 486.000 kHz." name="CPU Voltage 486.000 kHz" action="cpu-voltage 14" unit="ÂµV" min="750000" reversed="false" step="12500" max="950000"/>
+		<seekBar description="CPU Voltage for 486.000 kHz." name="CPU Voltage 486.000 kHz" action="cpu-voltage 14" unit="µV" min="750000" reversed="false" step="12500" max="950000"/>
 
-		<seekBar description="CPU Voltage for 384.000 kHz." name="CPU Voltage 384.000 kHz" action="cpu-voltage 15" unit="ÂµV" min="750000" reversed="false" step="12500" max="925000"/>
+		<seekBar description="CPU Voltage for 384.000 kHz." name="CPU Voltage 384.000 kHz" action="cpu-voltage 15" unit="µV" min="750000" reversed="false" step="12500" max="925000"/>
 
 	</settingsPane>
 
@@ -290,7 +290,7 @@
 
 	<settingsPane description="Set advanced governor settings. These settings are active only if the screen is on." name="Governor Parameters tuning">
 
-		<spinner description="This will set the CPU0 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="scaling_governor_cpu0">
+		<spinner description="This will set the CPU0 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="scaling_governor_cpu0">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -299,7 +299,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU1 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu1">
+		<spinner description="This will set the CPU1 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu1">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -308,7 +308,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU2 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu2">
+		<spinner description="This will set the CPU2 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu2">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -317,7 +317,7 @@
 			<spinnerItem name="ondemand" value="ondemand"/> 
 		</spinner>
 
-		<spinner description="This will set the CPU3 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: Alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu3">
+		<spinner description="This will set the CPU3 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu3">
 			<spinnerItem name="alucard" value="alucard"/>
 			<spinnerItem name="conservative" value="conservative"/> 
 			<spinnerItem name="darkness" value="darkness"/>
@@ -336,7 +336,7 @@
 
 		<seekBar description="This threshold is used as up threshold while sampling at frequencies less than freq_for_responsiveness. Above that, normal up_threshold is used. This gives the option to make scaling aggressive or relaxed until a frequency and normal for higher frequencies. Again, during calculation of optimal frequency which should not trigger up policy, down threshold to consider is difference between up_threshold_at_min_freq and down_differential. (Only for HYPER, Ondemand and PegasusQ) (Default: 60%)" name="up_threshold_at_min_freq" action="generic_cortex /tmp/up_threshold_at_min_freq" unit="%" min="1" reversed="false" step="1" max="100"/>
 
-		<seekBar description="Sampling Interval, measured in Âµs. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 50.000 Âµs)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="Âµs" min="10000" reversed="false" step="5000" max="200000"/>
+		<seekBar description="Sampling Interval, measured in µs. This factor determines how often the governor should poll for CPU usage in terms of frequency and load percentage to make scaling decisions - either scale CPU Up or scale it Down. (Only for HYPER, OnDemand, PegasusQ, Conservative, Nightmare, Darkness, Alucard) (Default: 20.000 µs)" name="sampling_rate" action="generic_cortex /tmp/sampling_rate" unit="µs" min="10000" reversed="false" step="5000" max="200000"/>
 
 		<seekBar description="Acts as a multiplier for sampling interval for re-evaluating the load when CPU is truly busy and is on highest clock frequency (policy max). Setting to 1 makes no difference and causes CPU to immediately scale down from highest frequency. Sampling down factor is NOT valid for lower frequencies and low load conditions. Note that CPU is scaled up to max frequency when max_load_freq is greater than up_threshold X current frequency. (or to cur_freq + (freq_step X policy.max_freq) whichever is smaller) Max_load_freq is an arbitrary frequency calculated as the maximum of load_frequencies. (Only for HYPER, Ondemand, PegasusQ, Conservartive) (Default: 1)" name="sampling_down_factor" action="generic_cortex /tmp/sampling_down_factor" unit="int" min="1" reversed="false" step="1" max="10"/>
 
@@ -660,9 +660,7 @@
 	<settingsPane description="Tune the msm thermal module" name="MSM Thermal Tuning">
 
 		<spinner description="CPU Thermal control, Can be Default driver without controls, or Intelli thermal driver with controls below or Dual Intelligent Thermal driver with controls below and ROM thermal control, its will limit CPU frequency when CPU reach the max limit heat, till cooled and restore full power, this can help with too hot phone playing games! intelli driver is more aggressive and drop freq to 1.4 then to 1.2 then to 1.1ghz that will reduce performance in all bench apps! defaut will lock on 1.9Ghz most of the time, and burn the fingers but give you more SCORE to show off." name="CPU Temp Control" action="msm_thermal">
-			<spinnerItem name="Default Temp Control" value="msm_temp"/> 
 			<spinnerItem name="Intelli Temp Control" value="intelli_temp"/>
-			<spinnerItem name="Intelli Temp Control Dual" value="intelli_temp_dual"/>
 		</spinner>
 
 		<spinner description="Hotplug CPU Thermal control main switch, this allow to shutdown cores 1,2,3 and leave core 0 as main core on high frequency. but it reduces global performance on high temp, if set disabled then all CPU cores will be online and operate at lower frequencies when the temperature is high!" name="HotPlug Thermal CPU Control" action="generic /sys/module/msm_thermal/core_control/core_control">
@@ -724,11 +722,11 @@
       <checkbox description="Main switch for Voltage Control. If disabled, all below settings have no effect! If you are using an external application or script to configure GPU voltage, do not tick this checkbox. Do not start to mod voltage before you enable this switch! It will not have any effect and you will have to set all to default, and tune again!" name="GPU Voltage Main Switch" action="generic_cortex /tmp/gpu_voltage_switch" label="GPU Voltage Main Switch"/>
 
       <seekBar description="GPU Voltage for the first (lowest) step" 
-		name="GPU Voltage Level1. (Default: 945000)" action="gpu-voltage 1" unit="ÂµV" min="845000" reversed="false" step="25000" max="1050000"/>
+		name="GPU Voltage Level1. (Default: 945000)" action="gpu-voltage 1" unit="µV" min="845000" reversed="false" step="25000" max="1050000"/>
       <seekBar description="GPU Voltage for the second (mid) step" 
-		name="GPU Voltage Level2. (Default: 1050000)" action="gpu-voltage 2" unit="ÂµV" min="950000" reversed="false" step="25000" max="1200000"/>
+		name="GPU Voltage Level2. (Default: 1050000)" action="gpu-voltage 2" unit="µV" min="950000" reversed="false" step="25000" max="1200000"/>
       <seekBar description="GPU Voltage for the third (highest) step" 
-		name="GPU Voltage Level3. (Default: 1150000)" action="gpu-voltage 3" unit="ÂµV" min="1050000" reversed="false" step="25000" max="1200000"/>
+		name="GPU Voltage Level3. (Default: 1150000)" action="gpu-voltage 3" unit="µV" min="1050000" reversed="false" step="25000" max="1200000"/>
 
     </settingsPane>
 
@@ -752,7 +750,7 @@
 
 	<settingsPane description="Set Boost Touch nr. cpus" name="Touch Boost Cpus">
 
-		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 2 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
+		<seekBar description="Number of cpus affected by touchboost control. From 1 cpu to 4 cpus (Default: 1 cpus)" name="nr_boost_cpus" action="generic /sys/module/alu_t_boost/parameters/nr_boost_cpus" unit="cpus" min="1" reversed="false" step="1" max="4"/>
 
 	</settingsPane>
 
@@ -771,7 +769,7 @@
 			<spinnerItem name="MMC Power Save" value="power_save"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: BFQ)" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -782,7 +780,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: BFQ)" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -867,7 +865,7 @@
 			<spinnerItem name="ZRAM OFFLINE" value="0"/>
 		</spinner>
 
-		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 60)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
+		<seekBar description="Control for ZRAM Swap allocation, when you set higher here, ZRAM will be used more instead of real RAM and give you more RAM! with light cost of performance (default 50)" name="Swappiness" action="generic /proc/sys/vm/swappiness" unit="%" min="30" reversed="false" step="5" max="95"/>
 
 	</settingsPane>
 
@@ -1017,7 +1015,7 @@
 
 	<settingsPane description="AC and USB charging control" name="AC and USB charging control">
 
-		<spinner description="This will force fast charging! (Disabled: Disabled | Use stock AC level on USB(Max 1000mA) | Use custom mA on AC and USB) (Default: Disabled)" name="Force Fast Charging" action="generic /sys/kernel/fast_charge/force_fast_charge">
+		<spinner description="This will force fast charging! (Disabled: Disabled | Use stock AC level on USB(Max 1000mA) | Use custom mA on AC and USB) (Default: Use stock AC level on USB(Max 1000mA)" name="Force Fast Charging" action="generic /sys/kernel/fast_charge/force_fast_charge">
 			<spinnerItem name="Disabled" value="0"/>
 			<spinnerItem name="Use stock AC level on USB(Max 1000mA)" value="1"/>
 			<spinnerItem name="Use custom mA on AC and USB" value="2"/>
@@ -1075,19 +1073,24 @@
 
 		<button description="Click here to see current SELINUX status! Enforcing or Permissive globally. default is Permissive, you can switch to Enforcing with button below." name="SELINUX STATUS CHECK" action="push-actions/selinux_check" label="SELINUX STATUS CHECK"/>
 
-		<button description="Touch here to set SELinux as Permissive or Enforcing. If SELinux is set as Permissive (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change SELinux to Enforcing! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX PERMISSIVE/ENFORCING CONTROL" action="push-actions/selinux_switch" label="SELINUX PERMISSIVE/ENFORCING"/>
-
-		<spinner description="Control to enable or disable logcat, logcat used to debug ROM services and apps, if you never used it, then keep it OFF, you get more battery and less CPU usage on idle." name="Logcat ON/OFF" action="logger">
-			<spinnerItem name="Logcat OFF" value="0"/> 
-			<spinnerItem name="Logcat ON" value="1"/> 
+		<spinner description="Google Play Services Battery Drain Workaround. Reboot is needed!" name="GS Enable On Boot" action="generic_cortex /tmp/gpsfixer">
+			<spinnerItem name="Enabled" value="on"/> 
+			<spinnerItem name="Disabled" value="off"/> 
+		</spinner>
+		
+		<spinner description="Control to enable or disable logcat, logcat used to debug ROM services and apps, if you never used it, then keep it OFF, you get more battery and less CPU usage on idle." name="Logcat ON/OFF" action="generic_cortex /tmp/disablelogcat">
+			<spinnerItem name="Logcat OFF" value="off"/> 
+			<spinnerItem name="Logcat ON" value="on"/> 
 		</spinner>
 
+		<button description="Touch here to set SELinux as Permissive or Enforcing. If SELinux is set as Permissive (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change SELinux to Enforcing! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX PERMISSIVE/ENFORCING CONTROL" action="push-actions/selinux_switch" label="SELINUX PERMISSIVE/ENFORCING"/>
+		
 	</settingsPane>
 
 	<settingsPane description="WIFI Settings" name="WIFI">
 
 		<button description="Clean WIFI DHCP IP Lease. Push the button to activate!" name="Clean WIFI Lease" action="push-actions/fix_wifi" label="Clean WIFI Lease"/>
-
+		
 	</settingsPane>
 
 	<settingsPane description="Set GPS and NTP settings and options." name="GPS - NTP">
