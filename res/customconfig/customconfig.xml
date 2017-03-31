@@ -1072,7 +1072,9 @@
 		<button description="Click here to start applications Database Optimization. Compacting, cleaning and indexing will take max 2min." name="DB OPTIMIZATION" action="push-actions/database_optimizing" label="DATABASE OPTIMIZATON"/>
 
 		<button description="Click here to see current SELINUX status! Enforcing or Permissive globally. default is Permissive, you can switch to Enforcing with button below." name="SELINUX STATUS CHECK" action="push-actions/selinux_check" label="SELINUX STATUS CHECK"/>
-
+		
+		<button description="Touch here to set SELinux as Permissive or Enforcing. If SELinux is set as Permissive (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change SELinux to Enforcing! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX PERMISSIVE/ENFORCING CONTROL" action="push-actions/selinux_switch" label="SELINUX PERMISSIVE/ENFORCING"/>
+		
 		<spinner description="Google Play Services Battery Drain Workaround. Reboot is needed!" name="GS Enable On Boot" action="generic_cortex /tmp/gpsfixer">
 			<spinnerItem name="Enabled" value="on"/> 
 			<spinnerItem name="Disabled" value="off"/> 
@@ -1083,7 +1085,6 @@
 			<spinnerItem name="Logcat ON" value="on"/> 
 		</spinner>
 
-		<button description="Touch here to set SELinux as Permissive or Enforcing. If SELinux is set as Permissive (Default: set on boot) then life is good and all works with no problems with GSM connection or access permissions with different apps. When you push this button ONCE, kernel command line will be updated and current kernel will reinstall automatic. To see changes you'll need to REBOOT! Then you can check using check button above. WARNING some USER apps loose some or all data (mostly configurations) when permissions changed! Do backup before change SELinux to Enforcing! When you'll reboot Dalvik Cache will be cleared out and kernel will reboot. Wait for apps to be optimized." name="SELINUX PERMISSIVE/ENFORCING CONTROL" action="push-actions/selinux_switch" label="SELINUX PERMISSIVE/ENFORCING"/>
 		
 	</settingsPane>
 
