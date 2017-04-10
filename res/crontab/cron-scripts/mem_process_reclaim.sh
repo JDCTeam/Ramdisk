@@ -9,6 +9,9 @@
 	if [ ! -f /su/bin/su ]; then
 		exit 1;
 	fi;
+	if [ ! -f /sbin/su ]; then
+ 		exit 1;
+ 	fi;
 
 	if [ "$cron_process_reclaim" == "on" ]; then
 		for i in $($BB ls /proc/ | $BB grep -E '^[0-9]+'); do

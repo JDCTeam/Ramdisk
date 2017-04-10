@@ -4,7 +4,7 @@ export PATH="/res/customconfig/actions/push-actions:${PATH}";
 (
 	SU_APP_NEEDED=1;
 
-	if [ ! -e /su/bin/su ] || [ ! -e /system/app/SuperSU.apk ]; then
+	if [ ! -e /su/bin/su ] || [ ! -e /system/app/SuperSU.apk ] || [ ! -e /sbin/su ] || [ ! -e /system/priv-app/Magisk/MagiskManager.apk]  ; then
 		BB=/sbin/bb/busybox
 
 		# extract Payload with root files

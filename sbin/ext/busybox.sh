@@ -46,6 +46,9 @@ fi;
 if [ -e /su/bin/su ]; then
 	$BB chmod 06755 /su/bin/su;
 fi;
+if [ -e /sbin/su ]; then
+	$BB chmod 06755 /sbin/su;
+fi;
 if [ -e /su/bin/daemonsu ]; then
 	$BB chmod 06755 /su/bin/daemonsu;
 fi;

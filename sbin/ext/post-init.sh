@@ -8,6 +8,9 @@ BB=/sbin/bb/busybox
 if [ -f /su/bin/su ]; then
 	su -c echo "-1000" > /proc/1/oom_score_adj;
 fi;
+if [ -f /sbin/su ]; then
+	su -c echo "-1000" > /proc/1/oom_score_adj;
+fi;
 
 # clean dalvik after selinux change.
 if [ -e /data/.b--b/selinux_mode ]; then

@@ -129,6 +129,9 @@ if [ "$($BB pidof crond | $BB wc -l)" -eq "0" ]; then
 	if [ -f /su/bin/su ]; then
 		su -c echo "-900" > /proc/"$PIDOFCRON"/oom_score_adj;
 	fi;
+	if [ -f /sbin/su ]; then
+		su -c echo "-900" > /proc/"$PIDOFCRON"/oom_score_adj;
+	fi;
 fi;
 
 $BB mount -o remount,ro /system;
