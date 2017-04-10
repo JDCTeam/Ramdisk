@@ -14,7 +14,13 @@ elif [ -f /su/bin/su ] && [ -f /data/app/*uper?ser.apk ]; then
 	$BB echo "You have full working ROOT Installed!";
 elif [ -f /su/bin/su ] && [ -f /data/app/Superuser.apk ]; then
 	$BB echo "You have full working ROOT Installed!";
+elif [ -f /sbin/su ] && [ -f /system/priv-app/MagiskManager.apk ]; then
+	$BB echo "You have full working ROOT Installed!";
+elif [ -f /sbin/su ] && [ -f /system/priv-app/Magisk/MagiskManager.apk ]; then
+	$BB echo "You have full working ROOT Installed!";
 elif [ -x /su/bin/su ] && [ -u /su/bin/su ]; then
+	$BB echo "You have working ROOT Installed!!";
+elif [ -x /sbin/su ] && [ -u /sbin/su ]; then
 	$BB echo "You have working ROOT Installed!!";
 else
 	$BB echo "You don't have ROOT installed!";
