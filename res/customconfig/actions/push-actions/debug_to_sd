@@ -25,7 +25,7 @@ case "${debug_to_sd}" in
 	1)
 		(
 			# needed for /system/xbin/zip chmod
-			if [ "$($BB mount | $BB grep system | $BB grep -c ro)" -eq "1" ]; then
+			if [ "$($BB mount | $BB grep "on /system" | $BB cut -c 69-70 | $BB grep -c ro)" -eq "1" ]; then
 				$BB mount -o remount,rw /system;
 			fi;
 
@@ -325,7 +325,7 @@ case "${debug_to_sd}" in
 	3)
 		(
 			# needed for /system/xbin/zip chmod
-			if [ "$($BB mount | $BB grep system | $BB grep -c ro)" -eq "1" ]; then
+			if [ "$($BB mount | $BB grep "on /system" | $BB cut -c 69-70 | $BB grep -c ro)" -eq "1" ]; then
 				$BB mount -o remount,rw /system;
 			fi;
 

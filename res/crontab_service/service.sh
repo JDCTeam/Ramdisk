@@ -9,7 +9,7 @@ if [ "$ROOTFS_MOUNT" -eq "0" ]; then
 	$BB mount -o remount,rw /;
 fi;
 
-if [ "$($BB mount | $BB grep system | $BB grep -c ro)" -eq "1" ]; then
+if [ "$($BB mount | $BB grep "on /system" | $BB cut -c 69-70 | $BB grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /system;
 fi;
 
