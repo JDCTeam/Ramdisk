@@ -30,6 +30,6 @@ persist.sys.usb.config=mtp,adb
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Tue 11 Apr 23:19:59 EEST 2017
-ro.bootimage.build.date.utc=1491941999
+ro.bootimage.build.date=Tue 25 Apr 20:28:11 EEST 2017
+ro.bootimage.build.date.utc=1493141291
 persist.sys.usb.config=adb
