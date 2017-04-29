@@ -762,18 +762,18 @@
 
 <settingsTab name="IO">
 
-	<settingsPane description="Tune IO settings managed by Kernel" name="IO Tuning">
+	<settingsPane description="Tune AWAKE IO settings managed by Kernel" name="IO Tuning">
 
-		<seekBar description="Maximum number of kilobytes to read-ahead for INTERNAL SDCARD! file systems on this device. (Default: 1024 kB)" name="kilobytes to read-ahead" action="generic_cortex /tmp/intsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
+		<seekBar description="Maximum number of kilobytes to read-ahead for INTERNAL SDCARD! file systems on this device.Works only if IO-Tweaks tweak is enabled! (Default: 1024 kB) !!! Depends on CortexBrain-Background-Process !!!" name="kilobytes to read-ahead" action="generic_cortex /tmp/intsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
 
-		<seekBar description="Maximum number of kilobytes to read-ahead for EXTERNAL SDCARD! file systems on this device. (Default: 1024 kB)" name="kilobytes to read-ahead" action="generic_cortex /tmp/extsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
+		<seekBar description="Maximum number of kilobytes to read-ahead for EXTERNAL SDCARD! file systems on this device.Works only if IO-Tweaks tweak is enabled! (Default: 1024 kB) !!! Depends on CortexBrain-Background-Process !!!" name="kilobytes to read-ahead" action="generic_cortex /tmp/extsd_read_ahead_kb" unit="kB" min="128" reversed="false" step="128" max="4096"/>
 
 		<spinner description="MMC power usage control, when set performance mode MMC I/O write speed will be very fast, when set in power save mode write performance will be degraded but more power saved." name="MMC Power Usage" action="mmc_mode">
 			<spinnerItem name="MMC Performance" value="performance"/> 
 			<spinnerItem name="MMC Power Save" value="power_save"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
+		<spinner description="This will set the default AWAKE IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default Awake IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -784,7 +784,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the default IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the default AWAKE IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default Awake IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -792,6 +792,36 @@
 			<spinnerItem name="ROW" value="row"/> 
 			<spinnerItem name="SIOPLUS" value="sioplus"/> 
 			<spinnerItem name="FIOPS" value="fiops"/> 
+			<spinnerItem name="ZEN" value="zen"/> 
+		</spinner>
+
+	</settingsPane>
+	
+	<settingsPane description="Tune DEEPSLEEP IO settings managed by Kernel" name="IO Tuning">
+
+		<spinner description="This will set the default AWAKE IO scheduler for external sdcard. (Default: ROW)" name="Default Awake IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+			<spinnerItem name="BFQ" value="bfq"/>
+			<spinnerItem name="CFQ" value="cfq"/> 
+			<spinnerItem name="DEADLINE" value="deadline"/> 
+			<spinnerItem name="NOOP" value="noop"/> 
+			<spinnerItem name="ROW" value="row"/> 
+			<spinnerItem name="SIO" value="sio"/> 
+			<spinnerItem name="FIFO" value="fifo"/> 
+			<spinnerItem name="FIOPS" value="fiops"/> 
+			<spinnerItem name="VR" value="vr"/> 
+			<spinnerItem name="ZEN" value="zen"/> 
+		</spinner>
+
+		<spinner description="This will set the DEEPSLEEP IO scheduler for internal sdcard. (Default: ROW) !!! Depends on CortexBrain-Background-Process !!!" name="DEEPSLEEP IO Scheduler Int." action="generic_cortex /tmp/internal_iosched_sleep">
+			<spinnerItem name="BFQ" value="bfq"/>
+			<spinnerItem name="CFQ" value="cfq"/> 
+			<spinnerItem name="DEADLINE" value="deadline"/> 
+			<spinnerItem name="NOOP" value="noop"/> 
+			<spinnerItem name="ROW" value="row"/> 
+			<spinnerItem name="SIO" value="sio"/> 
+			<spinnerItem name="FIFO" value="fifo"/> 
+			<spinnerItem name="FIOPS" value="fiops"/> 
+			<spinnerItem name="VR" value="vr"/> 
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
