@@ -390,6 +390,15 @@ GOOGLE_SERVICE_BD_FIXER()
 	fi;
 }
 
+KILL_MEDIASERVER()
+{
+	if [ "$mediakiller" == "on" ]; then
+		$BB  killall -9 android.process.media;
+		$BB  killall -9 mediaserver;
+		$BB echo "MediaServer killed" > /data/.b--b/ms
+	fi;
+}
+
 # get values from profile
 PROFILE=$(cat /data/.b--b/.active.profile);
 . /data/.b--b/"$PROFILE".profile;
@@ -399,6 +408,7 @@ if [ "$stweaks_boot_control" == "yes" ]; then
 	# Load Custom Modules
 	MODULES_LOAD;
 	GOOGLE_SERVICE_BD_FIXER;
+	KILL_MEDIASERVER;
 fi;
 
 #$BB echo "0" > /cputemp/freq_limit_debug;
@@ -452,6 +462,3 @@ setprop persist.service.power.enable 0
 setprop persist.service.radio.enable 0
 setprop persist.service.system.enable 0
 
-$BB  killall -9 android.process.media;
-$BB  killall -9 mediaserver;
-$BB echo "MediaServer killed" > /data/.b--b/ms

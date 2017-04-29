@@ -178,6 +178,7 @@ usb_charge_level=460
 tcp_congestion_control=cubic
 selinux_control=off
 gpsfixer=off
+mediakiller=on
 logger=0
 gpsregion=No_GPS_Zone_changes
 init_d=off

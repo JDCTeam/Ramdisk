@@ -1080,6 +1080,11 @@
 			<spinnerItem name="Disabled" value="off"/> 
 		</spinner>
 		
+		<spinner description="Kill mediaserver when boot is completed" name="MediaServer Enable On Boot" action="generic_cortex /tmp/mediakiller">
+			<spinnerItem name="Enabled" value="on"/> 
+			<spinnerItem name="Disabled" value="off"/> 
+		</spinner>
+		
 		<spinner description="Control to enable or disable logcat, logcat used to debug ROM services and apps, if you never used it, then keep it OFF, you get more battery and less CPU usage on idle.REBOOT IS REQUIRED" name="Logcat ON/OFF" action="logger">
 			<spinnerItem name="Logcat OFF" value="0"/> 
 			<spinnerItem name="Logcat ON" value="1"/> 
