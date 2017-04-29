@@ -785,7 +785,7 @@
 			<spinnerItem name="MMC Power Save" value="power_save"/> 
 		</spinner>
 
-		<spinner description="This will set the default AWAKE IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default Awake IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
+		<spinner description="This will set the default AWAKE IO scheduler for internal sdcard. A reboot should be performed when this value is changed. (Default: BFQ)" name="Default Awake IO Scheduler Int." action="iosched internal /sys/block/mmcblk0/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -796,7 +796,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the default AWAKE IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: ROW)" name="Default Awake IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the default AWAKE IO scheduler for external sdcard. A reboot should be performed when this value is changed. (Default: BFQ)" name="Default Awake IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -809,9 +809,9 @@
 
 	</settingsPane>
 	
-	<settingsPane description="Tune DEEPSLEEP IO settings managed by Kernel" name="IO Tuning">
+	<settingsPane description="Tune DEEPSLEEP IO settings managed by Kernel" name="IO Tuning while Sleeping">
 
-		<spinner description="This will set the default AWAKE IO scheduler for external sdcard. (Default: ROW)" name="Default Awake IO Scheduler Ext." action="iosched sd /sys/block/mmcblk1/queue/scheduler">
+		<spinner description="This will set the DEEPSLEEP IO scheduler for internal sdcard. (Default: FIOPS) !!! Depends on CortexBrain-Background-Process !!!" name="DEEPSLEEP IO Scheduler Int." action="generic_cortex /tmp/internal_iosched_sleep">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -824,7 +824,7 @@
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
 
-		<spinner description="This will set the DEEPSLEEP IO scheduler for internal sdcard. (Default: ROW) !!! Depends on CortexBrain-Background-Process !!!" name="DEEPSLEEP IO Scheduler Int." action="generic_cortex /tmp/internal_iosched_sleep">
+		<spinner description="This will set the DEEPSLEEP IO scheduler for external sdcard. (Default: FIOPS) !!! Depends on CortexBrain-Background-Process !!!" name="DEEPSLEEP IO Scheduler Ext." action="generic_cortex /tmp/sd_iosched_sleep">
 			<spinnerItem name="BFQ" value="bfq"/>
 			<spinnerItem name="CFQ" value="cfq"/> 
 			<spinnerItem name="DEADLINE" value="deadline"/> 
@@ -836,7 +836,7 @@
 			<spinnerItem name="VR" value="vr"/> 
 			<spinnerItem name="ZEN" value="zen"/> 
 		</spinner>
-
+		
 	</settingsPane>
 
 </settingsTab>
