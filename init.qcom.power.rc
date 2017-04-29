@@ -147,9 +147,6 @@ on enable-low-power
 on boot
     trigger enable-low-power
 
-on property:init.svc.recovery=running
-    trigger enable-low-power
-
 on property:recovery.perf.mode=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
@@ -163,7 +160,7 @@ on property:recovery.perf.mode=0
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor alucard
 
 on property:dev.bootcomplete=1
-    setprop sys.io.scheduler bfq
+     trigger enable-low-power
 
     rm /data/system/perfd/default_values
     stop mpdecision
