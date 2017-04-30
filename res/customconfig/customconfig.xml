@@ -919,22 +919,22 @@
 
 			<checkbox description="UKSM Enable and Disable main switch. (default OFF)" name="Ultra Kernel Samepage Merging" action="generic01 /sys/kernel/mm/uksm/run" label="UKSM Switch"/>
 
-			<spinner description="UKSM CPU Governor power when screen is ON, you can set high or low operation to scan and share memory across apps. (default is medium)" name="UKSM CPU AWAKE GOV" action="uksm_gov_on">
+			<spinner description="UKSM CPU Governor power when screen is ON, you can set high or low operation to scan and share memory across apps. (default: is Low Power)" name="UKSM CPU AWAKE GOV" action="uksm_gov_on">
 				<spinnerItem name="Full Power" value="full"/> 
 				<spinnerItem name="Medium Power" value="medium"/> 
 				<spinnerItem name="Low Power" value="low"/> 
 				<spinnerItem name="No Power (idle)" value="quiet"/> 
 			</spinner>
 
-			<spinner description="UKSM CPU Governor power when screen is OFF, you can set high or low operation to scan and share memory across apps. (default is No Power)" name="UKSM CPU SLEEP GOV" action="generic_cortex /tmp/uksm_gov_sleep">
+			<spinner description="UKSM CPU Governor power when screen is OFF, you can set high or low operation to scan and share memory across apps. (default: is No Power)" name="UKSM CPU SLEEP GOV" action="generic_cortex /tmp/uksm_gov_sleep">
 				<spinnerItem name="Full Power" value="full"/> 
 				<spinnerItem name="Medium Power" value="medium"/> 
 				<spinnerItem name="Low Power" value="low"/> 
 				<spinnerItem name="No Power (idle)" value="quiet"/> 
 			</spinner>
 
-			<seekBar description="The lower is set, more RAM we can gain at cost of slight performance (Default: 1000 ms)." name="UKSM Scan Delay Interval"
-			action="generic /sys/kernel/mm/uksm/sleep_millisecs" unit="ms" min="50" reversed="false" step="50" max="2000"/>
+			<seekBar description="The lower is set, more RAM we can gain at cost of slight performance (Default: 2000 ms)." name="UKSM Scan Delay Interval"
+			action="generic /sys/kernel/mm/uksm/sleep_millisecs" unit="ms" min="50" reversed="false" step="50" max="3000"/>
 
 	</settingsPane>
 
