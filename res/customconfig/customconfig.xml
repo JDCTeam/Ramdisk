@@ -299,7 +299,6 @@
 			<spinnerItem name="nightmare" value="nightmare"/> 
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="pegasusq" value="pegasusq"/>
-			<spinnerItem name="slim" value="slim"/>
 		</spinner>
 
 		<spinner description="This will set the CPU1 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu1">
@@ -311,7 +310,6 @@
 			<spinnerItem name="nightmare" value="nightmare"/> 
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="pegasusq" value="pegasusq"/>
-			<spinnerItem name="slim" value="slim"/>
 		</spinner>
 
 		<spinner description="This will set the CPU2 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu2">
@@ -323,7 +321,6 @@
 			<spinnerItem name="nightmare" value="nightmare"/> 
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="pegasusq" value="pegasusq"/>
-			<spinnerItem name="slim" value="slim"/> 
 		</spinner>
 
 		<spinner description="This will set the CPU3 governor. Default CPU governor will only be set during early stages of booting (before init.d execution), and can be overridden by any other scripts or applications. (Default: alucard)" name="Default CPU Governor" action="generic /sys/devices/system/cpu/cpufreq/all_cpus/scaling_governor_cpu3">
@@ -335,7 +332,6 @@
 			<spinnerItem name="nightmare" value="nightmare"/> 
 			<spinnerItem name="ondemand" value="ondemand"/>
 			<spinnerItem name="pegasusq" value="pegasusq"/>
-			<spinnerItem name="slim" value="slim"/>
 		</spinner>
 
 		<button description="Use this button to push all new changes to the governor in real time!" name="GOV Policy Install" action="push-actions/cpu_tuning_update" label="Apply settings to GOV core"/>
