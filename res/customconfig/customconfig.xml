@@ -702,7 +702,7 @@
 			<spinnerItem name="performance" value="performance"/>
 		</spinner>
 
-		<spinner description="This it is the max value of GPU frequency. (Default: 450.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
+		<spinner description="This it is the max value of GPU frequency. (Default: 128.000 kHz)" name="GPU Max Frequency" action="generic /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_pwrlevel">
 			<spinnerItem name="450.000 kHz" value="0"/>
 			<spinnerItem name="320.000 kHz" value="1"/>
 			<spinnerItem name="200.000 kHz" value="2"/>
