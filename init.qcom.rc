@@ -29,7 +29,8 @@ import init.qcom.power.rc
 import init.qcom.usb.rc
 
 on early-init
-    setprop sys.io.scheduler noop
+    setprop sys.perf.profile 2
+    write /sys/block/mmcblk0/queue/scheduler noop
     symlink /data/tombstones /tombstones
 
     mkdir /firmware 0771 system system
@@ -45,17 +46,14 @@ on init
     mkdir /efs 0771 system radio
 
     symlink /sdcard /storage/sdcard0
+    symlink /storage/sdcard1 /external_sd
+    symlink /storage/sdcard1 /mnt/external_sd
 
 on fs
     mount_all fstab.qcom
     setprop ro.product.name jgedlteue
 
 on post-fs-data
-
-    write /sys/devices/system/cpu/cpu0 1
-    write /sys/devices/system/cpu/cpu1 1
-    write /sys/devices/system/cpu/cpu2 1
-    write /sys/devices/system/cpu/cpu3 1
     
     # Create directories for tombstone
     mkdir /data/tombstones 0771 system system
@@ -160,6 +158,10 @@ on early-boot
     setprop qcom.audio.init complete
 
 on boot
+
+    #KSM
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    
     # Configure bluetooth
     chmod 0660 /proc/bluetooth/sleep/lpm
     chmod 0660 /proc/bluetooth/sleep/btwrite
