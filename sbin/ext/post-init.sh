@@ -408,6 +408,7 @@ if [ "$stweaks_boot_control" == "yes" ]; then
 	# Load Custom Modules
 	MODULES_LOAD;
 	GOOGLE_SERVICE_BD_FIXER;
+	$BB sleep 15; #wait 15 sec before kill media server
 	KILL_MEDIASERVER;
 fi;
 
