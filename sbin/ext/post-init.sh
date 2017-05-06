@@ -416,7 +416,7 @@ fi;
 
 
 (
-	$BB sleep 30;
+	$BB sleep 10;
 
 	# get values from profile
 	PROFILE=$($BB cat /data/.b--b/.active.profile);
