@@ -168,7 +168,7 @@
 
 		<checkbox description="Enable or disable Power-efficient work queues will help to reduce power consumption at the cost of slight performance overhead. By enabling this, PE work queues are used for unbound scheduled work to save load on sibling CPU cores and queuing work on CPU 0." name="Power-efficient work queues"  action="generic01 /sys/module/workqueue/parameters/power_efficient" label="Power-efficient work queues"/>
 
-		<spinner description="Maximum CPUs speed while using GPS. (Default: 1890.000 kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
+		<spinner description="Maximum CPUs speed while using GPS. (Default: 1782.000kHz)." name="scaling_max_gps_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_gps_freq">
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
@@ -204,7 +204,7 @@
 			<spinnerItem name="384.000 kHz" value="384000"/> 
 		</spinner>
 
-		<spinner description="Maximum ON CALL CPUs speed. (Default: 1350.000 kHz). When phone is on call and suspended." name="scaling_max_oncall_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_oncall_freq">
+		<spinner description="Maximum ON CALL CPUs speed. (Default: 1782.000 kHz). When phone is on call and suspended." name="scaling_max_oncall_freq" action="genericfreq /sys/kernel/cpufreq_limit_manager/scaling_max_oncall_freq">
 			<spinnerItem name="1.890.000 kHz" value="1890000"/> 
 			<spinnerItem name="1.782.000 kHz" value="1782000"/> 
 			<spinnerItem name="1.674.000 kHz" value="1674000"/> 
