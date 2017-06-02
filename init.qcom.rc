@@ -396,6 +396,9 @@ on boot
 
     # RIL fast dormancy
     chown system radio /sys/class/sec/bamdmux/waketime
+    
+    #Set freeze timeout to 2 seconds
+    write /sys/power/pm_freeze_timeout 2000
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
