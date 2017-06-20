@@ -31,4 +31,4 @@ debug.atrace.tags.enableflags=0
 #
 ro.bootimage.build.date=Sat 3 Jun 01:45:47 EEST 2017
 ro.bootimage.build.date.utc=1496443547
-persist.sys.usb.config=adb
+persist.sys.usb.config=mtp
