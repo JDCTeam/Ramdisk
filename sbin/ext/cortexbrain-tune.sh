@@ -752,13 +752,13 @@ cortexbrain_background_process=1;
 if [ "$cortexbrain_background_process" -eq "1" ] && [ "$($BB pgrep -f "/sbin/ext/cortexbrain-tune.sh" | $BB wc -l)" -eq "2" ]; then
 	(while true; do
 		while [ "$($BB cat /sys/module/state_notifier/parameters/state_suspended)" != "N" ]; do
-			$BB sleep "3";
+			$BB sleep "30";
 		done;
 		# AWAKE State. all system ON
 		AWAKE_MODE;
 
 		while [ "$($BB cat /sys/module/state_notifier/parameters/state_suspended)" != "Y" ]; do
-			$BB sleep "3";
+			$BB sleep "30";
 		done;
 		# SLEEP state. All system to power save
 		SLEEP_MODE;
