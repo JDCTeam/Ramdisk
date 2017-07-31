@@ -635,7 +635,7 @@
 
 		<seekBar description="Max CPU's hotplugging limit. (Default: 4)" name="maxcoreslimit" action="generic /sys/kernel/alucard_hotplug/maxcoreslimit" unit="int" min="1" reversed="false" step="1" max="4"/>
 
-		<seekBar description="Max CPU's hotplugging limit. (Default: 2)" name="maxcoreslimit_sleep" action="generic /sys/kernel/alucard_hotplug/maxcoreslimit_sleep" unit="int" min="1" reversed="false" step="1" max="4"/>
+		<seekBar description="Max CPU's hotplugging limit. (Default: 1)" name="maxcoreslimit_sleep" action="generic /sys/kernel/alucard_hotplug/maxcoreslimit_sleep" unit="int" min="1" reversed="false" step="1" max="4"/>
 
 	</settingsPane>
 
