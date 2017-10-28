@@ -21,12 +21,12 @@ pm.dexopt.install=quicken
 pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.ab-ota=speed-profile
 debug.atrace.tags.enableflags=0
-ro.adb.secure=1
+ro.adb.secure=0
 ro.device.cache_dir=/data/cache
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Σαβ 28 Οκτ 2017 01:17:02 πμ EEST
-ro.bootimage.build.date.utc=1509142622
-ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.0.0/OPR6.170623.012/e8b644997c:userdebug/test-keys
+ro.bootimage.build.date=Σαβ 28 Οκτ 2017 04:55:36 μμ EEST
+ro.bootimage.build.date.utc=1509198936
+ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.0.0/OPR6.170623.012/948ca2a48a:userdebug/test-keys
 persist.sys.usb.config=adb
