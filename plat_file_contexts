@@ -10,6 +10,7 @@
 /(vendor|system/vendor)/lib(64)?/egl(/.*)?		u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/vndk-sp(/.*)?		u:object_r:vndk_sp_file:s0
 /(vendor|system/vendor)/compatibility_matrix.xml		u:object_r:vendor_configs_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service		u:object_r:hal_fingerprint_default_exec:s0
 /efs(/.*)?		u:object_r:efs_file:s0
 /odm(/.*)?		u:object_r:system_file:s0
 /oem(/.*)?		u:object_r:oemfs:s0
@@ -34,9 +35,9 @@
 /dev/uio[0-9]*		u:object_r:uio_device:s0
 /dev/vcs[0-9a-z]*		u:object_r:vcs_device:s0
 /ueventd\..*		u:object_r:rootfs:s0
-/data/dpm(/.*)?		u:object_r:dpmd_data_file:s0
 /mnt/asec(/.*)?		u:object_r:asec_apk_file:s0
 /mnt/user(/.*)?		u:object_r:mnt_user_file:s0
+/data/dpm(/.*)?		u:object_r:dpmd_data_file:s0
 /data/drm(/.*)?		u:object_r:drm_data_file:s0
 /data/adb(/.*)?		u:object_r:adb_data_file:s0
 /data/anr(/.*)?		u:object_r:anr_data_file:s0
@@ -105,8 +106,8 @@
 /dev/graphics(/.*)?		u:object_r:graphics_device:s0
 /dev/spdif_out.*		u:object_r:audio_device:s0
 /dev/rpmsg-omx[0-9]		u:object_r:rpmsg_device:s0
-/data/misc/qvr(/.*)?		u:object_r:qvrd_data_file:s0
 /data/app-asec(/.*)?		u:object_r:asec_image_file:s0
+/data/misc/qvr(/.*)?		u:object_r:qvrd_data_file:s0
 /data/misc/sms(/.*)?		u:object_r:radio_data_file:s0
 /data/misc/vpn(/.*)?		u:object_r:vpn_data_file:s0
 /data/misc/net(/.*)?		u:object_r:net_data_file:s0
