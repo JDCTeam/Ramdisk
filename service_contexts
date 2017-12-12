@@ -213,6 +213,7 @@ wigig                                          u:object_r:wigig_service:s0
 # DOLBY_START
 media.dolby_memoryservice                      u:object_r:audioserver_service:s0
 # DOLBY_END
+enrichrcsservice                               u:object_r:radio_service:s0
 #line 1 "/home/side/android/optcm14/out/target/product/jflte/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "device/qcom/sepolicy/test/service_contexts"
