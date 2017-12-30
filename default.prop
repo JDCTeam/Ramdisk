@@ -6,6 +6,7 @@ ro.secure=0
 ro.allow.mock.location=0
 ro.debuggable=1
 ro.zygote=zygote32
+tombstoned.max_tombstone_count=50
 dalvik.vm.image-dex2oat-Xms=64m
 dalvik.vm.image-dex2oat-Xmx=64m
 dalvik.vm.dex2oat-Xms=64m
@@ -20,13 +21,15 @@ pm.dexopt.boot=verify
 pm.dexopt.install=quicken
 pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.ab-ota=speed-profile
+pm.dexopt.inactive=verify
+pm.dexopt.shared=speed
 debug.atrace.tags.enableflags=0
-ro.adb.secure=0
+ro.adb.secure=1
 ro.device.cache_dir=/data/cache
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Τρι 21 Νοέ 2017 09:24:58 μμ EET
-ro.bootimage.build.date.utc=1511292298
-ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.0.0/OPR3.170623.013/081d093cde:userdebug/test-keys
+ro.bootimage.build.date=Σαβ 30 Δεκ 2017 05:49:31 μμ EET
+ro.bootimage.build.date.utc=1514648971
+ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.1.0/OPM1.171019.011/63ddb5c0b1:userdebug/test-keys
 persist.sys.usb.config=adb
