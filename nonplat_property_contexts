@@ -6,7 +6,6 @@ ctl.ipacm-diag             u:object_r:ipacm-diag_prop:s0
 ctl.ipacm                  u:object_r:ipacm_prop:s0
 ctl.mdm_helper             u:object_r:mdm_helper_prop:s0
 ctl.mpdecision             u:object_r:mpdecision_prop:s0
-ctl.msm_irqbal_lb          u:object_r:msm_irqbalance_prop:s0
 ctl.netmgrd                u:object_r:ctl_netmgrd_prop:s0
 ctl.perfd                  u:object_r:perfd_prop:s0
 ctl.port-bridge            u:object_r:ctl_port-bridge_prop:s0
@@ -15,9 +14,11 @@ ctl.qmuxd                  u:object_r:ctl_qmuxd_prop:s0
 ctl.qti                    u:object_r:qti_prop:s0
 ctl.sensors                u:object_r:sensors_prop:s0
 ctl.thermal-engine             u:object_r:ctl_thermal-engine_prop:s0
+ctl.vendor.imsrcsservice   u:object_r:ctl_vendor_imsrcsservice_prop:s0
 ctl.vendor.LKCore-dbg      u:object_r:ctl_LKCore_prop:s0
 ctl.vendor.LKCore-rel      u:object_r:ctl_LKCore_prop:s0
 ctl.vendor.msm_irqbalance         u:object_r:msm_irqbalance_prop:s0
+ctl.vendor.msm_irqbal_lb          u:object_r:msm_irqbalance_prop:s0
 ctl.vendor.msm_irqbl_sdm630       u:object_r:msm_irqbl_sdm630_prop:s0
 ctl.vendor.wigig_hostapd    u:object_r:ctl_vendor_wigigsvc_prop:s0
 ctl.vendor.wigig_supplicant u:object_r:ctl_vendor_wigigsvc_prop:s0
@@ -34,7 +35,11 @@ persist.graphics.vulkan.disable     u:object_r:graphics_vulkan_prop:s0
 persist.net.doxlat         u:object_r:xlat_prop:s0
 persist.rmnet.mux          u:object_r:rmnet_mux_prop:s0
 persist.sys.camera.preview        u:object_r:camera_prop:s0
+persist.vendor.bt.         u:object_r:bluetooth_prop:s0
+persist.vendor.crash.cnt         u:object_r:crash_prop:s0
+persist.vendor.crash.detect        u:object_r:crash_prop:s0
 persist.vendor.fst.         u:object_r:fst_prop:s0
+persist.vendor.mmi.        u:object_r:mmi_prop:s0
 persist.vendor.radio       u:object_r:radio_prop:s0
 persist.vendor.sys.        u:object_r:vendor_system_prop:s0
 persist.vendor.wigig.       u:object_r:wigig_prop:s0
@@ -71,6 +76,7 @@ sys.usb.tethering          u:object_r:sys_usb_tethering_prop:s0
 sys.usb_uicc.              u:object_r:uicc_prop:s0
 sys.usf.                   u:object_r:usf_prop:s0
 vendor.audio.sys.init             u:object_r:audio_prop:s0
+vendor.bg.boot_complete       u:object_r:bg_boot_complete_prop:s0
 vendor.bg_reset               u:object_r:bg_daemon_prop:s0
 vendor.ims.                u:object_r:qcom_ims_prop:s0
 vendor.peripheral.         u:object_r:per_mgr_state_prop:s0
@@ -80,3 +86,5 @@ vendor.spcom.              u:object_r:spcomlib_prop:s0
 vendor.wigig.               u:object_r:wigig_prop:s0
 wc_transport.              u:object_r:bluetooth_prop:s0
 wifi.ftmd.                 u:object_r:wififtmd_prop:s0
+wlan.driver.ath            u:object_r:wcnss_prop:s0
+wlan.driver.config         u:object_r:wcnss_prop:s0

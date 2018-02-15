@@ -96,8 +96,8 @@ on post-fs-data
     mkdir /data/misc/location/gsiff 0770 gps gps
 
     # Create directories for NFC
-    mkdir /data/nfc 0700 nfc nfc
-    mkdir /data/nfc/param 0700 nfc nfc
+#    mkdir /data/nfc 0700 nfc nfc
+#    mkdir /data/nfc/param 0700 nfc nfc
 
     # Create directories for WiFi
     mkdir /data/misc/wifi 0770 wifi wifi
