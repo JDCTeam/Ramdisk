@@ -33,12 +33,11 @@ media.sf.omx-plugin=libffmpeg_omx.so
 media.sf.extractor-plugin=libffmpeg_extractor.so
 ro.storage_manager.enabled=true
 media.recorder.show_manufacturer_and_model=true
-ro.lineage.version=15.1-20180318-UNOFFICIAL-jflte
-ro.lineage.releasetype=UNOFFICIAL
+ro.lineage.version=OptimizedCM-15.1-20180318
 ro.lineage.build.version=15.1
-ro.modversion=15.1-20180318-UNOFFICIAL-jflte
+ro.modversion=OptimizedCM-15.1-20180318
 ro.lineagelegal.url=https://lineageos.org/legal
-ro.lineage.display.version=15.1-20180318-UNOFFICIAL-jflte
+ro.lineage.display.version=OptimizedCM-15.1-20180318
 ro.config.ringtone=Orion.ogg
 net.tethering.noprovisioning=true
 ro.zygote=zygote32
@@ -49,7 +48,7 @@ ro.device.cache_dir=/data/cache
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Κυρ 18 Μάρ 2018 01:41:46 μμ EET
-ro.bootimage.build.date.utc=1521373306
-ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.1.0/OPM1.171019.021/08072af2fa:userdebug/test-keys
+ro.bootimage.build.date=Κυρ 18 Μάρ 2018 04:02:01 μμ EET
+ro.bootimage.build.date.utc=1521381721
+ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.1.0/OPM1.171019.021/d62f2766af:userdebug/test-keys
 persist.sys.usb.config=none
