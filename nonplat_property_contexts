@@ -61,7 +61,6 @@ ro.opengles.version           u:object_r:opengles_prop:s0
 ro.qc.sdk.us.                 u:object_r:usf_prop:s0
 ro.qualcomm.bluetooth.        u:object_r:bluetooth_prop:s0
 ro.qualcomm.bt.hci_transport  u:object_r:bluetooth_prop:s0
-ro.sf.lcd_density             u:object_r:sf_lcd_density_prop:s0
 ro.vendor.qti.am.reschedule_service u:object_r:reschedule_service_prop:s0
 ro.vendor.qti.sys.fw.bservice_ u:object_r:bservice_prop:s0
 ro.vendor.ril.             u:object_r:radio_prop:s0

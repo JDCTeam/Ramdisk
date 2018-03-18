@@ -594,6 +594,7 @@
 /dev/qbt1000		u:object_r:qbt1000_device:s0
 /dev/nfc-nci		u:object_r:nfc_device:s0
 /dev/qseecom		u:object_r:tee_device:s0
+/dev/bcm2079x		u:object_r:nfc_device:s0
 /dev/dpl_ctrl		u:object_r:rmnet_device:s0
 /dev/smem_log		u:object_r:smem_log_device:s0
 /dev/msm_dsps		u:object_r:sensors_device:s0
@@ -611,8 +612,8 @@
 /dev/socket/cnd		u:object_r:cnd_socket:s0
 /dev/socket/pps		u:object_r:pps_socket:s0
 /dev/msm_rotator		u:object_r:graphics_device:s0
-/system/xbin/zip		u:object_r:system_file:s0
 /sbin/bb/busybox		u:object_r:rootfs:s0
+/system/xbin/zip		u:object_r:system_file:s0
 /system/bin/qcks		u:object_r:mdm_helper_exec:s0
 /system/bin/efks		u:object_r:mdm_helper_exec:s0
 /dev/ipaNatTable		u:object_r:ipa_dev:s0
