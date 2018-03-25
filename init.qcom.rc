@@ -27,6 +27,7 @@
 
 import init.qcom.power.rc
 import init.qcom.usb.rc
+import init.spectrum.rc
 
 on early-init
     setprop sys.io.scheduler noop
