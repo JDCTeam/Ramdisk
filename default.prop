@@ -27,17 +27,17 @@ ro.build.selinux=1
 ro.config.notification_sound=Argon.ogg
 ro.config.alarm_alert=Hassium.ogg
 persist.sys.dun.override=0
-ro.lineage.build.version.plat.sdk=8
+ro.lineage.build.version.plat.sdk=9
 ro.lineage.build.version.plat.rev=0
 media.sf.omx-plugin=libffmpeg_omx.so
 media.sf.extractor-plugin=libffmpeg_extractor.so
 ro.storage_manager.enabled=true
 media.recorder.show_manufacturer_and_model=true
-ro.lineage.version=OptimizedCM-15.1-20180318
+ro.lineage.version=OptimizedCM-15.1-20180409
 ro.lineage.build.version=15.1
-ro.modversion=OptimizedCM-15.1-20180318
+ro.modversion=OptimizedCM-15.1-20180409
 ro.lineagelegal.url=https://lineageos.org/legal
-ro.lineage.display.version=OptimizedCM-15.1-20180318
+ro.lineage.display.version=OptimizedCM-15.1-20180409
 ro.config.ringtone=Orion.ogg
 net.tethering.noprovisioning=true
 ro.zygote=zygote32
@@ -48,7 +48,7 @@ ro.device.cache_dir=/data/cache
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Κυρ 18 Μάρ 2018 04:02:01 μμ EET
-ro.bootimage.build.date.utc=1521381721
-ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.1.0/OPM1.171019.021/d62f2766af:userdebug/test-keys
+ro.bootimage.build.date=Δευ 09 Απρ 2018 02:09:19 μμ EEST
+ro.bootimage.build.date.utc=1523272159
+ro.bootimage.build.fingerprint=samsung/lineage_jflte/jflte:8.1.0/OPM2.171019.029/ccba40d8df:userdebug/test-keys
 persist.sys.usb.config=none
